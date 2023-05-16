@@ -1,0 +1,95 @@
+
+
+.background {
+    background: linear-gradient(to bottom, #2affff, #fff48fea) repeat fixed 100%;
+    margin: 0px;
+    //animation: scroll_bgd 10s linear infinite; /* Adjust the animation duration and timing function as needed */
+}
+
+@keyframes scroll_bgd {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 100vh; /* Adjust the distance to scroll based on your content and desired effect */
+    }
+  }
+  
+
+.background_inner {
+    width: 100%;
+    height: 58rem;
+    display: flex;
+    align-items: center;
+}
+
+.foreground {
+    padding-top: 1rem;
+    border-radius: 2.5rem;
+    background-color: rgba(250, 244, 155, 0.945);
+    width: 100%;
+}
+
+.title_hi, .title_name {
+    margin: 0% auto;
+}
+
+.title_hi {
+    font-size: 30rem;
+    animation: hi_animation 2s forwards;
+    line-height: 80%;
+    color: rgb(255, 168, 55);
+    text-shadow: .5px .5px 15px rgba(12, 12, 12, 0.836);
+}
+
+@keyframes hi_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opactiy: 1;
+        transform: translateY(0px);
+    }
+}
+
+#my_text, #name_text {
+    background-color: red;
+    margin: 6% auto;
+    width: 50%;
+    height: 14rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18rem;
+}
+
+#my_text {
+    background-color: #00ff00;
+    width: 35%;
+}
+
+#m {
+
+}
+
+.border {
+    height: 3rem;
+    width: 100%;
+    background-image: 
+    repeating-linear-gradient(
+      -60deg, 
+      white, 
+      transparent 1rem,
+      #ff0b0b 1rem,
+      #06ff06 2rem
+    );
+    background-size: 200% 200%;
+    animation: border_ani 15s linear infinite
+}
+
+@keyframes border_ani {
+    100% {
+        background-position: 100% 100%;
+    } 
+}
