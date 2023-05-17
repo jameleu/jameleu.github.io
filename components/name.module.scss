@@ -1,0 +1,41 @@
+.first_name {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18rem;
+    width: 60%;
+    margin: 2% auto;
+    background-color: red;
+}
+
+@for $i from 1 through 5 {
+    .name_#{$i} {
+        line-height: 80%;
+        margin: 0%;
+        width: 0%;
+        overflow: hidden;
+        animation: name_animation 2s linear forwards;
+        animation-delay: $i * 0.8s;
+    }
+}
+
+@keyframes name_animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        color: white;
+        width: 100%;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        overflow: visible;
+        color: white;
+        width: 100%;
+    }
+}
+
