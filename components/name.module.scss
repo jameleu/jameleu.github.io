@@ -3,9 +3,15 @@
     align-items: center;
     justify-content: space-around;
     font-size: 18rem;
-    width: 60%;
+    width: 45%;
     margin: 2% auto;
-    background-color: red;
+}
+
+.name_base {
+    line-height: 80%;
+    margin: 0%;
+    width: 0%;
+    opacity: 0;
 }
 
 @for $i from 1 through 5 {
@@ -14,8 +20,8 @@
         margin: 0%;
         width: 0%;
         overflow: hidden;
-        animation: name_animation 2s linear forwards;
-        animation-delay: $i * 0.8s;
+        animation: name_animation 1s ease-out forwards;
+        animation-delay: 0.4 + $i * 0.4s;
     }
 }
 
@@ -23,19 +29,17 @@
     0% {
         opacity: 0;
     }
-    50% {
+    25% {
         opacity: 1;
         color: white;
         width: 100%;
-    }
-    75% {
-        opacity: 1;
     }
     100% {
         opacity: 1;
-        overflow: visible;
         color: white;
+        transform: rotateY(-360deg);
         width: 100%;
+        overflow: visible;
     }
 }
 

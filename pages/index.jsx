@@ -6,6 +6,7 @@ import styles from '../styles/home.module.scss';
 import n_styles from '../components/name.module.scss';
 import is_visible from '../components/is_visible.js';
 import { animated, useSpring, useChain, useSpringRef } from "react-spring";
+import Intro_Bio from '../components/intro_bio';
 
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -13,6 +14,9 @@ export default function Home() {
 
   const target_ref = useRef();
   const target_is_visible = is_visible(target_ref);
+
+  const f_name_ref = useRef();
+  const f_name_is_visible = is_visible(f_name_ref, null, 0, "0%", true);
 
   const l_start = "-500px";
   const l_opacity = 0;
@@ -67,9 +71,6 @@ export default function Home() {
   useChain([l_ref, r_ref], [0, 0.5], 1000);
   useChain([t_ref, d_ref], [0, 0.3], 1000);
 
-  const one_five = [1, 2, 3, 4, 5];
-  const my_name = {1 : 'J', 2  : 'a', 3: 'm', 4: 'e', 5: 's'};
-
   return (
       <div className={styles.background}> 
         <div className={styles.background_inner}>
@@ -100,12 +101,14 @@ export default function Home() {
 
 
           </div>
+
           <div className={n_styles.first_name}>
-            <p className={n_styles.name_1}>J</p>
-            <p className={n_styles.name_2}>a</p>
-            <p className={n_styles.name_3}>m</p>
-            <p className={n_styles.name_4}>e</p>
-            <p className={n_styles.name_5}>s</p>
+            <p className={f_name_is_visible ? n_styles.name_1 : n_styles.name_base}>J</p>
+            <div ref={f_name_ref} />
+            <p className={f_name_is_visible ? n_styles.name_2 : n_styles.name_base}>a</p>
+            <p className={f_name_is_visible ? n_styles.name_3 : n_styles.name_base}>m</p>
+            <p className={f_name_is_visible ? n_styles.name_4 : n_styles.name_base}>e</p>
+            <p className={f_name_is_visible ? n_styles.name_5 : n_styles.name_base}>s</p>
           </div>
 
           <div id={styles.j_text}>
@@ -116,7 +119,7 @@ export default function Home() {
         <div className={styles.border}> </div>
 
         <section>
-          <p id={styles.name_text}> BLAHBLAHBLAH </p>
+          <Intro_Bio/>
         </section>
 
     </div>

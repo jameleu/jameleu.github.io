@@ -11,7 +11,6 @@ export default function is_visible(target_ref, root = null, threshold = 0, root_
     useEffect(() => {
         const supported = !!window.IntersectionObserver;
         if(!supported || !target_ref?.current || shown_once) {
-            console.log("fail");
             return;
         }
 
@@ -19,6 +18,5 @@ export default function is_visible(target_ref, root = null, threshold = 0, root_
         observer.observe(target_ref?.current);
         return () => observer.disconnect();
     }, [target, root, root_margin, threshold, animate_once]);
-
     return target?.isIntersecting;    
 }
