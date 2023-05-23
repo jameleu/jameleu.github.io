@@ -7,8 +7,10 @@ import n_styles from '../components/name.module.scss';
 import is_visible from '../components/is_visible.js';
 import { animated, useSpring, useChain, useSpringRef } from "react-spring";
 import Intro_Bio from '../components/intro_bio';
+import { SlideLButton3D, SlideSButton3D, FillRectButton3D } from '../components/button_3d';
 
 import React, { useState, useRef, useEffect } from 'react';
+import FloatingBlocks from '../components/floating_blocks';
 
 export default function Home() {
 
@@ -120,6 +122,18 @@ export default function Home() {
 
         <section>
           <Intro_Bio/>
+        </section>
+        <section>
+          <FloatingBlocks/>
+        </section>
+        <section>
+          <SlideLButton3D text={" I enjoy sleeping to eating to coding!"}> </SlideLButton3D>
+        </section>
+        <section>
+          ZoomiN/FadeIn: These are some other things that I enjoy, too:
+        </section>
+        <section>
+          Let's connect!
         </section>
 
     </div>

@@ -1,0 +1,126 @@
+
+.slide_L, .slide_T, .slide_skew, .fill {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  z-index: 1;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  //border: groove;
+
+  
+  --top-color: #ccc;
+  --bottom-color: #999;
+  --right-color: #ddd;
+  
+  background: var(--top-color);
+  
+  transition: 
+    box-shadow 0.2s,
+    transform 0.15s;
+  
+  box-shadow:
+      1px 0   0 var(--right-color),
+      1px 1px 0 var(--bottom-color),
+      2px 1px 0 var(--right-color),
+      2px 2px 0 var(--bottom-color),
+      3px 2px 0 var(--right-color),
+      3px 3px 0 var(--bottom-color),
+      4px 3px 0 var(--right-color),
+      4px 4px 0 var(--bottom-color),
+      5px 4px 0 var(--right-color),
+      5px 5px 0 var(--bottom-color),
+      6px 5px 0 var(--right-color),
+      6px 6px 0 var(--bottom-color),
+      7px 6px 0 var(--right-color),
+      7px 7px 0 var(--bottom-color),
+      8px 7px 0 var(--right-color),
+      8px 8px 0 var(--bottom-color),
+    
+      -5px 20px 40px -8px #999;
+  
+  &:focus,
+  &:hover {
+    outline: 0;
+    box-shadow:
+      1px 0   0 var(--right-color),
+      1px 1px 0 var(--bottom-color),
+      2px 1px 0 var(--right-color),
+      2px 2px 0 var(--bottom-color),
+      3px 2px 0 var(--right-color),
+      3px 3px 0 var(--bottom-color),
+      4px 3px 0 var(--right-color),
+      4px 4px 0 var(--bottom-color),
+      
+      -5px 5px 12px -8px #999;
+    
+    transform: translate(10px, 3px);
+  }
+  
+  &:active {
+    outline: 0;
+    box-shadow:
+      1px 0   0 var(--right-color),
+      1px 1px 0 var(--bottom-color);
+    
+    transform: translate(5px, 5px);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1 ;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: lightblue;
+    width: 0;
+  }
+  &:hover {
+    color: red;
+    //border-color: green;
+  }
+}
+
+
+.slide_L::after {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.slide_L:hover::after {
+  width: 100%;
+}
+
+.slide_T::after {
+    height: 0%;
+    width: 100%;
+    transition: height 0.3s ease-in-out;
+}
+
+.slide_T:hover::after {
+  height: 100%;
+}
+
+.slide_skew::after {
+  width: 0;
+  height: 100%;
+  left: -25%;
+  transform: (skewX(45deg));
+  transition: width 0.3s ease-in-out;
+  
+}
+.slide_skew:hover::after {
+  width: 150%;
+}
+
+.fill::after {
+  
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  
+}
+.fill:hover::after {
+  transform: scale(1);
+  height: 100%;
+  width: 100%;
+}
