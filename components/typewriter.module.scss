@@ -1,0 +1,81 @@
+  .container { //holds .text html object and sets positioning and style of text
+    margin: 0;
+    min-height: 20vh;
+    display: grid;
+    align-content: space-around;
+    background: var(--bg-color);
+    --bg-color: hsl(49 37% 94%);
+  }
+  
+  .text { //style for text-based tag
+    font-size: clamp(1retm, 3vw + 1rem, 4rem);
+    font-family: "Source Code Pro", monospace;
+    position: relative; //important for ::after size so that TRBL can be used
+    width: max-content; //to prevent wrapping
+    margin: auto 41%;
+  }
+  
+  .text::before, //block to hide the text initially
+  .text::after  //cursor
+  {
+    content: "";
+    position: absolute; //to take on size of .text
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  //text hider
+  .text::before {
+    background: var(--bg-color); //match container color
+    animation: typewriter var(--typewriter_duration)
+      steps(var(--typewriter_key_presses)) 1s forwards; //reveals text
+      //use typewriter animation with typewriter duration as duration and
+      //number of key presses as characters / 2 for type then delete | 1 for type
+      //and with 1s delay, going forwards
+    animation-iteration-count: infinite; //repeat animation
+    
+  }
+  
+  //cursor
+  .text::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriter_duration)
+        steps(var(--typewriter_key_presses)) 1s forwards, //same animation as ::before reveal text
+      cursor_blink 800ms steps(var(--typewriter_key_presses)) infinite; 
+      //blinks with given delay forever at same step pace as typing animation
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes typewriter {
+    0% {
+      left: 0%;
+    }
+    25% {
+      left: 50%;
+    }
+    40% {
+      left: 100%;
+    }
+    50% { //built-in keyframe delay
+      left: 100%;
+    }
+    65% {
+      left: 50%;
+    }
+    90% {
+      left: 0%;
+    }
+    100% { //built-in keyframe delay for delay between iterations
+      left: 0%;
+    }
+  }
+  
+  @keyframes cursor_blink {
+    to {
+      background: transparent;
+    }
+  }
+  

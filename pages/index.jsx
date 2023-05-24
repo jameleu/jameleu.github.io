@@ -5,12 +5,13 @@ import utilStyles from '../styles/utils.module.scss';
 import styles from '../styles/home.module.scss';
 import n_styles from '../components/name.module.scss';
 import is_visible from '../components/is_visible.js';
-import { animated, useSpring, useChain, useSpringRef } from "react-spring";
+import { animated, useSpring, useChain, useSpringRef, SpringRef } from "react-spring";
 import Intro_Bio from '../components/intro_bio';
 import { SlideLButton3D, SlideSButton3D, FillRectButton3D } from '../components/button_3d';
 
 import React, { useState, useRef, useEffect } from 'react';
 import FloatingBlocks from '../components/floating_blocks';
+import Typewriter from '../components/typewriter';
 
 export default function Home() {
 
@@ -51,7 +52,7 @@ export default function Home() {
   const g_opacity = 0;
   const t_ref = useSpringRef();
   const appear_from_top = useSpring( {
-    ref: r_ref,
+    ref: t_ref,
     config: {mass: 2.5, tension: 60, friction: 17},
     from: {opacity: g_opacity, y: t_start}, 
     to: {opacity: target_is_visible ? 1 : g_opacity,
@@ -62,7 +63,7 @@ export default function Home() {
   const d_start = "-500px";
   const d_ref = useSpringRef();
   const appear_from_down = useSpring( {
-    ref: r_ref,
+    ref: d_ref,
     config: {mass: 1, tension: 70, friction: 5},
     from: {opacity: g_opacity, y: d_start}, 
     to: {opacity: target_is_visible ? 1 : g_opacity,
@@ -73,6 +74,75 @@ export default function Home() {
   useChain([l_ref, r_ref], [0, 0.5], 1000);
   useChain([t_ref, d_ref], [0, 0.3], 1000);
 
+  const coding_list = [
+    "I like to code in C++ and C.", 
+    "I like to code in Javascript and React.",
+    "I like to code in Python."
+  ];
+
+  const experiences_ref = useRef();
+  const experiences_is_visible = is_visible(experiences_ref);
+
+  const exp_start = "-500px";
+  const exp_ref = useSpringRef();
+  const exp_styles = useSpring( {
+    ref: exp_ref,
+    config: {mass: 1, tension: 70, friction: 5},
+    from: {opacity: 0, y: exp_start}, 
+    to: {opacity: experiences_is_visible ? 1 : 0,
+         y: experiences_is_visible ? "0px" : exp_start
+        }
+  });
+
+  const skills_ref = useRef();
+  const skills_is_visible = is_visible(skills_ref);
+
+  const skills_start = "-500px";
+  const skills_styles = useSpring( {
+    config: {mass: 1, tension: 70, friction: 5},
+    from: {opacity: 0, y: skills_start}, 
+    to: {opacity: skills_is_visible ? 1 : 0,
+         y: skills_is_visible ? "0px" : skills_start
+        }
+  });
+
+  const coding_ref = useRef();
+  const coding_is_visible = is_visible(coding_ref);
+
+  const coding_start = "-500px";
+  const coding_styles = useSpring( {
+    config: {mass: 1, tension: 70, friction: 5},
+    from: {opacity: 0, y: coding_start}, 
+    to: {opacity: coding_is_visible ? 1 : 0,
+         y: coding_is_visible ? "0px" : coding_start
+        }
+  });
+
+  const hobbies_ref = useRef();
+  const hobbies_is_visible = is_visible(hobbies_ref);
+  const hobbies_start = "2vh";
+  const hobbies_style = useSpring( {
+    config: {mass: 2.5, tension: 80, friction: 10, clamp: true},
+    from: {opacity: 0, y: hobbies_start, transform: "scale(10, 10)"}, 
+    to: async (next) => {
+        await next({y: hobbies_is_visible ? "0vh" : hobbies_start,})
+        await next([{opacity: hobbies_is_visible ? 1 : 0},
+         {transform: hobbies_is_visible ? "scale(1,1)" : "scale(10,10)"}])
+        },
+  });
+
+  const contact_ref = useRef();
+  const contact_is_visible = is_visible(contact_ref);
+
+  const contact_start = "-500px";
+  const contact_styles = useSpring( {
+    config: {mass: 1, tension: 80, friction: 8},
+    from: {opacity: 0, y: contact_start}, 
+    to: {opacity: contact_is_visible ? 1 : 0,
+         y: contact_is_visible ? "0px" : contact_start
+        }
+  });
+
   return (
       <div className={styles.background}> 
         <div className={styles.background_inner}>
@@ -81,7 +151,6 @@ export default function Home() {
       <Layout home>
 
       <div className={styles.foreground}>
-
 
         <Head>
           <title>{siteTitle}</title>
@@ -100,7 +169,6 @@ export default function Home() {
             <animated.p style={appear_from_top}> m </animated.p> 
             <animated.p style={appear_from_down}> e </animated.p> 
             <animated.p style={appear_from_down}> 's </animated.p> 
-
 
           </div>
 
@@ -127,13 +195,46 @@ export default function Home() {
           <FloatingBlocks/>
         </section>
         <section>
-          <SlideLButton3D text={" I enjoy sleeping to eating to coding!"}> </SlideLButton3D>
+          <Typewriter text_list={coding_list} duration={"12s"}/>
+          <SlideLButton3D text={"See my code!"}> </SlideLButton3D>
+        </section>
+        <section className={styles.test} ref={hobbies_ref}>
+          <animated.p style={hobbies_style}> ZoomiN/FadeIn: These are some other things that I enjoy, too: </animated.p> 
+        </section>
+        <br></br>
+
+        <section className={styles.test} ref={contact_ref}>
+            <animated.div style={contact_styles} className={styles.test}>
+              <div className={styles.float}>
+                <FillRectButton3D text={"Let's Connect!"}> </FillRectButton3D>
+              </div>
+            </animated.div>
+            
+
+
         </section>
         <section>
-          ZoomiN/FadeIn: These are some other things that I enjoy, too:
-        </section>
-        <section>
-          Let's connect!
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+        
         </section>
 
     </div>

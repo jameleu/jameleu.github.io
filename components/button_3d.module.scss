@@ -1,4 +1,4 @@
-
+//all button properties
 .slide_L, .slide_T, .slide_skew, .fill {
   padding: 1rem 2rem;
   font-size: 2rem;
@@ -20,7 +20,7 @@
     box-shadow 0.2s,
     transform 0.15s;
   
-  box-shadow:
+  box-shadow: //set 3D effect
       1px 0   0 var(--right-color),
       1px 1px 0 var(--bottom-color),
       2px 1px 0 var(--right-color),
@@ -38,12 +38,11 @@
       8px 7px 0 var(--right-color),
       8px 8px 0 var(--bottom-color),
     
-      -5px 20px 40px -8px #999;
+      -5px 20px 40px -8px #999; //set usual element shadow
   
   &:focus,
   &:hover {
-    outline: 0;
-    box-shadow:
+    box-shadow: //update graphics upon hover
       1px 0   0 var(--right-color),
       1px 1px 0 var(--bottom-color),
       2px 1px 0 var(--right-color),
@@ -59,14 +58,13 @@
   }
   
   &:active {
-    outline: 0;
-    box-shadow:
+    box-shadow: //minimize 3D graphics to make it look like it is pressed
       1px 0   0 var(--right-color),
       1px 1px 0 var(--bottom-color);
     
-    transform: translate(5px, 5px);
+    transform: translate(5px, 5px); //move to make button seem like it is pressed
   }
-  &:after {
+  &:after { //the element that transitions to cover the button background when hovered over
     content: "";
     position: absolute;
     z-index: -1 ;
@@ -74,23 +72,26 @@
     background: lightblue;
     width: 0;
   }
-  &:hover {
+  &:hover { //changes button text color upon hover
     color: red;
     //border-color: green;
   }
 }
 
+//individual button properties
 
-.slide_L::after {
+//slide from left
+.slide_L::after { //specifies initial state and transition type for button background cover
     height: 100%;
     width: 0;
     transition: width 0.3s ease-in-out;
 }
 
-.slide_L:hover::after {
+.slide_L:hover::after { //specifies hover state of button background cover
   width: 100%;
 }
 
+//slide from top
 .slide_T::after {
     height: 0%;
     width: 100%;
@@ -101,6 +102,7 @@
   height: 100%;
 }
 
+//slide from left but it is not the shape of the button; is more of a rhombus
 .slide_skew::after {
   width: 0;
   height: 100%;
@@ -113,6 +115,7 @@
   width: 150%;
 }
 
+//fill button from center to outside
 .fill::after {
   
   transform: scale(0);
