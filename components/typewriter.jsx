@@ -13,7 +13,7 @@ export default function Typewriter({text_list, duration}) {
         const timer = setInterval(() => {
             iterator = (iterator + 1) % text_list.length; //cycle through text list's items
             set_text(text_list[iterator]);
-        }, 12000); //timer runs this func every _ seconds
+        }, 12000); //timer runs this func every _ ms
 
         return () => clearInterval(timer); //cleanup upon return
     }, []);

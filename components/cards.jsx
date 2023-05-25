@@ -1,6 +1,6 @@
 
 
-export function Image_Card(image, alt, text) {
+export function Image_Card({image, alt, hdr, text}) {
     <div className={styles.card}> 
         <Image priority 
           src={image}
@@ -8,13 +8,14 @@ export function Image_Card(image, alt, text) {
           height={108}
           width={108}
           alt={alt}> </Image>
+          <h2> {hdr} </h2>
         <p> {text} </p>
     </div>
 }
 
-export function Card(text) {
+export function Card({hdr, text}) {
     <div className={styles.card}>
-        <h2> </h2>
+        <h2> {hdr} </h2>
         <p> {text} </p>
     </div>
 }

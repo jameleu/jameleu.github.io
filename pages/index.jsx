@@ -8,10 +8,14 @@ import is_visible from '../components/is_visible.js';
 import { animated, useSpring, useChain, useSpringRef, SpringRef } from "react-spring";
 import Intro_Bio from '../components/intro_bio';
 import { SlideLButton3D, SlideSButton3D, FillRectButton3D } from '../components/button_3d';
+import BubbleLine from "../components/bubbles.jsx";
 
 import React, { useState, useRef, useEffect } from 'react';
 import FloatingBlocks from '../components/floating_blocks';
 import Typewriter from '../components/typewriter';
+
+import { Carousel } from '../components/carousel';
+import { exp_card_list } from '../components/card_list';
 
 export default function Home() {
 
@@ -120,14 +124,14 @@ export default function Home() {
 
   const hobbies_ref = useRef();
   const hobbies_is_visible = is_visible(hobbies_ref);
-  const hobbies_start = "2vh";
+  const hobbies_start = "4vh";
   const hobbies_style = useSpring( {
-    config: {mass: 2.5, tension: 80, friction: 10, clamp: true},
-    from: {opacity: 0, y: hobbies_start, transform: "scale(10, 10)"}, 
+    config: {mass: 1, tension: 80, friction: 10, clamp: true},
+    from: {opacity: 0, y: hobbies_start, transform: "scale(7, 7)"}, 
     to: async (next) => {
         await next({y: hobbies_is_visible ? "0vh" : hobbies_start,})
         await next([{opacity: hobbies_is_visible ? 1 : 0},
-         {transform: hobbies_is_visible ? "scale(1,1)" : "scale(10,10)"}])
+         {transform: hobbies_is_visible ? "scale(1,1)" : "scale(7,7)"}])
         },
   });
 
@@ -180,10 +184,6 @@ export default function Home() {
             <p className={f_name_is_visible ? n_styles.name_4 : n_styles.name_base}>e</p>
             <p className={f_name_is_visible ? n_styles.name_5 : n_styles.name_base}>s</p>
           </div>
-
-          <div id={styles.j_text}>
-            
-          </div>
         </section>
 
         <div className={styles.border}> </div>
@@ -192,6 +192,7 @@ export default function Home() {
           <Intro_Bio/>
         </section>
         <section>
+          <Carousel cards= {exp_card_list} />
           <FloatingBlocks/>
         </section>
         <section>
@@ -204,7 +205,7 @@ export default function Home() {
         <br></br>
 
         <section className={styles.test} ref={contact_ref}>
-            <animated.div style={contact_styles} className={styles.test}>
+            <animated.div style={contact_styles} className={styles.test2}>
               <div className={styles.float}>
                 <FillRectButton3D text={"Let's Connect!"}> </FillRectButton3D>
               </div>
@@ -240,7 +241,7 @@ export default function Home() {
     </div>
     </Layout>
 
-
+    <BubbleLine></BubbleLine>
     </div>
 
 

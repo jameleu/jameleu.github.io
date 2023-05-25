@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/layout.js';
+import BubbleLine from '../components/bubbles.jsx';
 
 export default function FirstPost() {
   return (
+    <>
     <Layout>
       <Head>
         <title>First Post</title>
@@ -12,6 +14,45 @@ export default function FirstPost() {
       <h2>
         <Link href="/">← Back to home</Link>
       </h2>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br><br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br><br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </Layout>
+    <BubbleLine> </BubbleLine>
+
+    </>
   );
 }

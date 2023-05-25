@@ -1,0 +1,20 @@
+.carousel {
+    height: 50vh;
+    width: 80%;
+    background-color: lightblue;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides_container {
+    background-color: lightgreen;
+    font-size: 10rem;
+    display: flex;
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    width: 40%;
+    background-color: red;
+}
