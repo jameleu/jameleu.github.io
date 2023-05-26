@@ -67,7 +67,7 @@
   &:after { //the element that transitions to cover the button background when hovered over
     content: "";
     position: absolute;
-    z-index: -1 ;
+    z-index: -1;
     top: 0; bottom: 0; left: 0; right: 0;
     background: lightblue;
     width: 0;

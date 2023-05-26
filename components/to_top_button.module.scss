@@ -1,89 +1,107 @@
-body {
+.container {
     padding: 0;
     margin: 0;
-    min-height: 500vh;
-    background-color: rgb(139, 201, 228);
-    animation: body 1s linear;
+    background-color: transparent;
+    //animation: bgd 1s linear;
+     /* Pause the animation */
+     animation-play-state: paused;
+     /* Bind the animation to scroll */
+     animation-delay: calc(var(--whole_scroll_1) * -1s);
+     /* These last 2 properites clean up overshoot weirdness */
+     animation-iteration-count: 1;
+     animation-fill-mode: both;
+
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    min-height: 10vh;
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 101;
   }
-  @keyframes body {
+  @keyframes bgd {
     to {
       background-color: rgb(19, 48, 97);
     }
   }
   
-  .progress {
-    height: 3px;
-    width: 0%;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: progress 1s linear;
-  }
-  @keyframes progress {
-    to {
-      background-color: rgb(20, 255, 226);
-      width: 100%;
-    }
-  }
-  
-  .cube-wrap {
-    --size: 30vmin;
+  .cube_wrap {
+    --size: 12vmin;
     position: fixed;
     width: 0;
     height: 0;
     perspective: 100vmin;
     z-index: -1;
-    bottom: 25%;
-    right: 10%;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: space-evenly;
-    height: 50vh;
-    width: 20%;
-    margin: auto;
-    background-color: red;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 15%;
+    right: 8%;
   }
   
   .to_top {
     position: fixed;
-    z-index: 1;
-    transform: translateY(375%);
-    background-color: black;
-    border-radius: 20%;
-    color: white;
-    //animation: jump 1.5s ease-in infinite;
+    z-index: 103;
+
+    text-align: center;
+
+    height: 7vmin;
+    width: 7vmin;
+    background-color: rgba(250, 248, 237, 0.774);
+    box-shadow: 1px 1px 6px -2px black;
+    border-radius: 9999px;
+    color: black;
+    opacity: 0;
+    bottom: 12%;
+    right: 6%;
+    transform: translateY(0px) scale(1,1);
+    text-decoration: none;
+
+    animation-play-state: running;
+    animation-delay: 1s;
+    animation: jump 1.5s ease-in infinite;
+  }
+
+  .to_top_active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .to_top_text {
+    font-size: 0.7rem;
+    margin: 0;
+    transform: translateY(-0.7vh);
+    font-family: Garamond;
   }
   
   @keyframes jump {
     0% {
-      transform: translateY(375%);
+      transform: translateY(0%);
+    }
+    8% {
+      transform: translateY(-25%);    
     }
     25% {
-      transform: translateY(380%);    
-    }
-    50% {
       transform: translateY(0%);
     }
     100% {
-      transform: translateY(375%);
+      transform: translateY(0%);
     }
   }
   
   .to_top:hover {
-    transform: translateY(360%) scale(1.1, 1.1);
+    animation: none;
+    transform: translateY(-10%) scale(1.1, 1.1);
   }
   
   .cube {
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
     animation: cube 1s linear;
+    animation-play-state: paused;
+    animation-delay: calc(var(--whole_scroll_1) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
   }
   @keyframes cube {
     to {
@@ -91,7 +109,7 @@ body {
     }
   }
   
-  .side {
+  .top, .bottom, .front, .back, .left, .right {
     position: absolute;
     width: var(--size);
     height: var(--size);
@@ -99,38 +117,29 @@ body {
     backface-visibility: visible;
     top: calc(var(--size) * -.5);
     left: calc(var(--size) * -.5);
+    border: outset rgba(190, 185, 185, 0.829);
   }
   .top {
-    background-color: #fff;
+    background-color: #e0dede;
     transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
   }
   .bottom {
-    background-color: #999;
+    background-color: #f0f0f0;
     transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
   }
   .left {
-    background-color: #ccc;
+    background-color: #bebebe;
     transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
   }
   .right {
-    background-color: #ddd;
+    background-color: #e7e6e6;
     transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
   }
   .front {
-    background-color: #aaa;
+    background-color: #e9e9e9;
     transform: translateZ(calc(var(--size) * .5));
   }
   .back {
-    background-color: #bbb;
+    background-color: #b9b8b8;
     transform: translateZ(calc(var(--size) * -.5));
-  }
-  
-  :root * {
-    /* Pause the animation */
-    animation-play-state: paused;
-    /* Bind the animation to scroll */
-    animation-delay: calc(var(--scroll) * -1s);
-    /* These last 2 properites clean up overshoot weirdness */
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
   }

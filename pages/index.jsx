@@ -16,6 +16,8 @@ import Typewriter from '../components/typewriter';
 
 import { Carousel } from '../components/carousel';
 import { exp_card_list } from '../components/card_list';
+import ToTopButton from '../components/to_top_button.jsx';
+import Progress from '../components/progress.jsx';
 
 export default function Home() {
 
@@ -152,6 +154,7 @@ export default function Home() {
         <div className={styles.background_inner}>
           <p className={styles.title_hi}> Hi! </p>
         </div>
+      <Progress></Progress>
       <Layout home>
 
       <div className={styles.foreground}>
@@ -204,7 +207,7 @@ export default function Home() {
         </section>
         <br></br>
 
-        <section className={styles.test} ref={contact_ref}>
+        <section ref={contact_ref}>
             <animated.div style={contact_styles} className={styles.test2}>
               <div className={styles.float}>
                 <FillRectButton3D text={"Let's Connect!"}> </FillRectButton3D>
@@ -240,7 +243,7 @@ export default function Home() {
 
     </div>
     </Layout>
-
+    <ToTopButton></ToTopButton>
     <BubbleLine></BubbleLine>
     </div>
 

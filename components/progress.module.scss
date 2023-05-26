@@ -1,0 +1,23 @@
+
+.progress {
+    height: 1vh;
+    width: 0%;
+    background-color: #5199ffdf;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+    border: groove rgba(222, 209, 209, 0.816);
+    z-index: 100;
+
+    animation-play-state: paused;
+    animation-delay: calc(var(--whole_scroll_2) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  @keyframes progress {
+    to {
+      background-color: rgba(0, 2, 57, 0.816);
+      width: 100%;
+    }
+  }
