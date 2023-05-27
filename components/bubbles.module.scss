@@ -19,6 +19,8 @@
     z-index: 100; //top layer of other elements w/specified z-index
 
     pointer-events: none; //allow it to be on top but not interactable
+
+    margin: -50vh 0 0;
 }
 
 .bubble {

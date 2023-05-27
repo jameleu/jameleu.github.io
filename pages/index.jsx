@@ -20,6 +20,9 @@ import { exp_card_list } from '../components/card_list';
 import ToTopButton from '../components/to_top_button.jsx';
 import Progress from '../components/progress.jsx';
 
+//import Nav from '../components/nav.jsx';
+import Footer from '../components/footer.jsx';
+
 export default function Home() {
 
   const target_ref = useRef();
@@ -187,6 +190,7 @@ export default function Home() {
             <p className={f_name_is_visible ? n_styles.name_3 : n_styles.name_base}>m</p>
             <p className={f_name_is_visible ? n_styles.name_4 : n_styles.name_base}>e</p>
             <p className={f_name_is_visible ? n_styles.name_5 : n_styles.name_base}>s</p>
+            <p className={f_name_is_visible ? n_styles.exclam : n_styles.name_base}>!</p>
           </div>
         </section>
 
@@ -245,6 +249,7 @@ export default function Home() {
     </div>
     </Layout>
     <ToTopButton></ToTopButton>
+    <Footer></Footer>
     <BubbleLine></BubbleLine>
     </div>
 

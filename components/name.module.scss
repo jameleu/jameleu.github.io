@@ -1,10 +1,13 @@
-.first_name {
+
+.first_name { //will be a little off center since ! is being treated as if it were not in this div due to name letter width
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 18rem;
-    width: 45%;
-    margin: 2% auto;
+    font-size: 17rem;
+    max-width: 55%;
+    margin: 0% auto 10% auto;
+    --text_color: rgba(130, 228, 223, 0.925);
+
 }
 
 .name_base {
@@ -21,8 +24,29 @@
         width: 0%;
         overflow: hidden;
         animation: name_animation 1s ease-out forwards;
-        animation-delay: 0.4 + $i * 0.4s;
-        transition: all .35s ease-in-out
+        animation-delay: 0.32 + $i * 0.32s;
+        transition: all .35s ease-in-out;
+        color: black;
+    }
+}
+
+.exclam {
+    line-height: 80%;
+    margin: 0%;
+    width: 0%;
+    opacity: 0;
+
+    animation: exclam_animation 1s ease-in forwards;
+    animation-delay: 2.5s;
+    color: var(--text_color);
+}
+
+@keyframes exclam_animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -32,12 +56,12 @@
     }
     25% {
         opacity: 1;
-        color: white;
+        color: var(--text_color);
         width: 100%;
     }
     100% {
         opacity: 1;
-        color: white;
+        color: var(--text_color);
         transform: rotateY(-360deg);
         width: 100%;
         overflow: visible;
