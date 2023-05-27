@@ -9,10 +9,10 @@
     "embla-carousel-autoplay": "^8.0.0-rc05",
     "embla-carousel-react": "^8.0.0-rc04",
     "next": "latest",
+    "noisejs": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
-    "react-scroll-motion": "^0.3.2",
     "react-spring": "^9.7.1",
     "sass": "^1.62.1"
   }

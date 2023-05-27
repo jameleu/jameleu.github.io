@@ -14,6 +14,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import FloatingBlocks from '../components/floating_blocks';
 import Typewriter from '../components/typewriter';
 
+import FloatingBubbles from '../components/floating_bubbles';
 import { Carousel } from '../components/carousel';
 import { exp_card_list } from '../components/card_list';
 import ToTopButton from '../components/to_top_button.jsx';
@@ -196,7 +197,7 @@ export default function Home() {
         </section>
         <section>
           <Carousel cards= {exp_card_list} />
-          <FloatingBlocks/>
+          <FloatingBubbles/>
         </section>
         <section>
           <Typewriter text_list={coding_list} duration={"12s"}/>
