@@ -130,14 +130,16 @@ export default function Home() {
 
   const hobbies_ref = useRef();
   const hobbies_is_visible = is_visible(hobbies_ref);
-  const hobbies_start = "4vh";
+  const start_y = "2vh";
+  const start_x = "-500vw";
   const hobbies_style = useSpring( {
     config: {mass: 1, tension: 80, friction: 10, clamp: true},
-    from: {opacity: 0, y: hobbies_start, transform: "scale(7, 7)"}, 
+    from: {opacity: 0, y: start_y, x: start_x, transform: "scale(3, 3)"}, 
     to: async (next) => {
-        await next({y: hobbies_is_visible ? "0vh" : hobbies_start,})
+        await next([{y: hobbies_is_visible ? "0vh" : start_y}, {x: hobbies_is_visible ? "0vw" : start_x}])
         await next([{opacity: hobbies_is_visible ? 1 : 0},
-         {transform: hobbies_is_visible ? "scale(1,1)" : "scale(7,7)"}])
+         {transform: hobbies_is_visible ? "scale(1,1)" : "scale(3, 3)"}, 
+         ])
         },
   });
 
@@ -154,6 +156,7 @@ export default function Home() {
   });
 
   return (
+    <div className={styles.outer}>
       <div className={styles.background}> 
         <div className={styles.background_inner}>
           <p className={styles.title_hi}> Hi! </p>
@@ -165,6 +168,7 @@ export default function Home() {
 
         <Head>
           <title>{siteTitle}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         </Head>
         <section>
           <div id={styles.my_text}>
@@ -207,7 +211,7 @@ export default function Home() {
           <Typewriter text_list={coding_list} duration={"12s"}/>
           <SlideLButton3D text={"See my code!"}> </SlideLButton3D>
         </section>
-        <section className={styles.test} ref={hobbies_ref}>
+        <section className={styles.hobbies} ref={hobbies_ref}>
           <animated.p style={hobbies_style}> ZoomiN/FadeIn: These are some other things that I enjoy, too: </animated.p> 
         </section>
         <br></br>
@@ -250,9 +254,10 @@ export default function Home() {
     </Layout>
     <ToTopButton></ToTopButton>
     <Footer></Footer>
-    <BubbleLine></BubbleLine>
     </div>
 
+    <BubbleLine></BubbleLine>
+</div>
 
   );
 }
