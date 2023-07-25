@@ -8,11 +8,11 @@
   }
   
   .text { //style for text-based tag
-    font-size: clamp(1retm, 3vw + 1rem, 4rem);
+    font-size: 2vw;
     font-family: "Source Code Pro", monospace;
     position: relative; //important for ::after size so that TRBL can be used
     width: max-content; //to prevent wrapping
-    margin: auto 41%;
+    margin: auto 28%;
   }
   
   .text::before, //block to hide the text initially
