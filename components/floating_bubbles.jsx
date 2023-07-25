@@ -2,17 +2,18 @@ import { bubbles } from "./bubble_pos.jsx";
 import { useRef, useEffect, useState } from "react";
 import styles from "./floating_bubbles.module.scss";
 import { Noise } from "noisejs";
+import Image from "next/image";
 
 //takes past random numbers generated to create new random numbers to decide aount to move each bubble
 
 //const CANVAS_WIDTH = 3000;
-// The amplitude. more=more movement
-const NoiseAmount = 3;
+// The amplitude. more=more range of movement
+const NoiseAmount = 1;
 
 // The frequency. Smaller for flat slopes, higher for jagged spikes. effectively is speed of animation since changes
 // how big the random numbers generated from noise algorithm are, and these numbers are part of amount moved per frame 
-const NoiseSpeed = 0.0018;
-const MoveAmount = 8; //factor of num of pixels to move per frame
+const NoiseSpeed = 0.0004;
+const MoveAmount = 2; //factor of num of pixels to move per frame
 
 // Pixels to move per frame. At 60fps, this would be 18px a sec.
 // const SCROLL_SPEED = 0.3;
@@ -81,10 +82,13 @@ export default function FloatingBubbles() {
             const is_hovered_over = matches(curr_bubble, ":hover");
 
             //updating movement values for animation frame
+            const X_RATIO = 0.055; //converting original data from px data to vh/vw
+            const Y_RATIO = 0.14;
 
-            var new_y = bubble.y;
-            var new_x = bubble.x;
+            var new_y = bubble.yWithNoise * Y_RATIO;
+            var new_x = bubble.xwithNoise * X_RATIO;
 
+            //store for potential next frame that need it
             var newNoiseSeedX = bubble.noiseSeedX;
             var newNoiseSeedY = bubble.noiseSeedY;
             
@@ -95,16 +99,18 @@ export default function FloatingBubbles() {
         
                 const random_x = MoveAmount*noise.simplex2(newNoiseSeedX, 0); //random geneeration based on new seed based on last seed
                 const random_y = MoveAmount*noise.simplex2(newNoiseSeedY, 0);
-                new_y = bubble.y + random_y + NoiseAmount;
-                new_x = bubble.x + random_x + NoiseAmount;
+                new_y = bubble.y * Y_RATIO + random_y + NoiseAmount;
+                new_x = bubble.x * X_RATIO + random_x + NoiseAmount;
 
                 if(curr_bubble) { 
                     //update next frame of animation for this bubble
-                    curr_bubble.style.transform = `translate(${new_x}px, ${new_y}px) scale(${bubble.s})`;
+                    curr_bubble.style.transform = `translate(${new_x}vw, ${new_y}vh) scale(${bubble.s})`;
+                    curr_bubble.style.zIndex = 0; //reset z index
                 }
             }
-            else {
-                curr_bubble.style.transform = `translate(${new_x}px, ${new_y - 10}px) scale(${bubble.s + 0.09})`;
+            else { //if is hovered over:
+              curr_bubble.style.zIndex = 9999; //for this bubble's children so they can
+              //overcome stacking order of sibling bubbles so that being first in chronological order does not mean that it appears above others
             }
             return {
               ...bubble, //updating each bubble and its attributes (below)
@@ -122,7 +128,9 @@ export default function FloatingBubbles() {
     };
     return (
         <div className={styles.bubble_wrapper}>
+          
           <div className={styles.bubbles}>
+          
             {bubbles.map((bubble, index) => (
               <div
                 className={styles.bubble}
@@ -132,8 +140,25 @@ export default function FloatingBubbles() {
                 //   backgroundPosition: backgroundPositions[index],
                    opacity: is_ready ? 1 : 0, //fade in when animation is ready
                   transform: `translate(${bubble.x}px, ${bubble.y}px) scale(${bubble.s})`,
-                }}
-              />
+                }}>
+                  <div className={styles.hitbox}> <div className={styles.popup}> 
+                  <Image
+                  priority
+                  src="/images/text_bubble1.png"
+                  className={styles.text_bubble}
+                  height={108}
+                  width={108}
+                  alt="text_bubble.png"
+            />
+            <div className={styles.des}> {bubble.desc} </div>
+                  
+                  </div> 
+                   </div>
+                <div className={styles.bbl_txt}> 
+                
+                {bubble.skill} </div>
+                
+                </div>
             ))}
           </div>
         </div>
