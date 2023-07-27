@@ -90,10 +90,10 @@
 //wrapper class for text bubble
 .popup {
   position: relative;
-  transform: translate(8.5vw, 12vh);
+  transform: translate(8vw, 6vw);
   pointer-events: none;
   width: 15vw;
-  height: 30vh;
+  height: 15vw;
 
   opacity: 1;
   z-index: 3; 
@@ -104,7 +104,7 @@
 }
 
 .bubbles {
-  height: 88vh;
+  height: 80vh;
   overflow: hidden;
   position: relative;
 }

@@ -1,7 +1,7 @@
 //all button properties
 .slide_L, .slide_T, .slide_skew, .fill {
-  padding: 1rem 2rem;
-  font-size: 2rem;
+  padding: 1.5vw 2vw;
+  font-size: 2vw;
   z-index: 1;
   color: #333;
   position: relative;
@@ -15,10 +15,12 @@
   --right-color: #ddd;
   
   background: var(--top-color);
+
+  border-radius: 3%;
   
   transition: 
-    box-shadow 0.2s,
-    transform 0.15s;
+    box-shadow 1s,
+    transform 0.5s;
   
   box-shadow: //set 3D effect
       1px 0   0 var(--right-color),

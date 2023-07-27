@@ -12,7 +12,7 @@
     font-family: "Source Code Pro", monospace;
     position: relative; //important for ::after size so that TRBL can be used
     width: max-content; //to prevent wrapping
-    margin: auto 28%;
+    margin: auto 28%; //determines left starting pos
   }
   
   .text::before, //block to hide the text initially

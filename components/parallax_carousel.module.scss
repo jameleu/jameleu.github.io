@@ -1,0 +1,112 @@
+.parallax {
+    width: 100%;
+    height: 100vh;
+    animation: move_anim2 1s ease-in-out infinite; //infinite allows it to potentially be run forever
+    animation-play-state: paused; //is paused without scroll
+    animation-delay: calc(var(--curr_scroll_3) * -1.2s); //calculates based on scroll var times -2s 
+    //more negative time = faster animation goes with scroll
+    
+    animation-iteration-count: 1; //number of animations possible with scrolling down
+
+    opacity: 0;
+}
+
+.fixed_wrapper {
+    position: fixed;
+    top: -10vh;
+    left: 0vw;
+    padding: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.headers2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 10% auto 4% auto;  
+}
+
+.header_reason_T {
+
+    font-size: 3vw;
+
+    width: 90%;
+
+    margin: 2% 0% 2% 5%;
+
+    // box-shadow: 0.7rem 0.2rem 1rem 0rem rgba(128, 128, 128, 0.75);
+
+}
+
+@keyframes move_anim2 {
+    0% {
+        opacity: 0;
+        pointer-events: none; //no interactivity
+    }
+    15% {
+        opacity: 0;
+        pointer-events: none;        
+    }
+    25% {
+        opacity: 0.3;
+        pointer-events: none;        
+    }
+    55% {
+        opacity: 1;
+        pointer-events: visible;
+    }
+    70% {
+        opacity: 1;
+        pointer-events: visible;
+    }
+    100% {
+        // transform: skew(10deg, 20deg) translateY(0px) rotate(0deg) scale(1, 1); 
+        opacity: 0.2;
+        pointer-events: none;
+    }
+}
+
+.header_reason_B {
+    
+    width: 80%;
+
+    font-size: 4vw;
+
+    // box-shadow: 0.4rem 0.1rem 2rem -.2rem grey;
+
+    margin: 0% 0% 0% 5%;  
+}
+
+// .shadow_T {
+//     animation: shadow_anim 1s linear infinite; //infinite allows it to potentially be run forever
+//     animation-play-state: paused; //is paused without scroll
+//     animation-delay: calc(var(--curr_scroll_2) * -1.2s); //calculates based on scroll var times -2s 
+//     //more negative time = faster animation goes with scroll
+    
+//     animation-iteration-count: 1; //number of animations possible with scrolling down
+//     animation-fill-mode: both; //to ensure changes occur asap and the end keyframe lasts after the animation
+
+//     transform: translateY(-15%) translateX(-200%) rotateX(70deg) skew(-30deg, 45deg) scale(0,0); 
+
+//     opacity: 0;
+//     width: 150%;
+//     height: 75%;
+
+//     background-color: grey;
+//     filter: blur(8px);
+//     z-index: 1;
+// }
+
+// @keyframes shadow_anim {
+//     to {
+//         transform: translateY(-15%) translateX(-80%) rotateX(70deg) skew(-30deg, 45deg) scale(1, 1); 
+//         opacity: 1;
+
+//     }
+// }

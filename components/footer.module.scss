@@ -18,7 +18,7 @@
 }
 
 .email {
-    font-size: 120%;
+    font-size: 1.5vw;
     color: rgb(75, 75, 75, 0.8);
     margin: 0% 0vw 0% 3%;
     flex-shrink: 2;
@@ -27,7 +27,7 @@
 }
 
 .bigger_email {
-    font-size: 2.8rem;
+    font-size: 3.5vw;
     color: rgba(71, 71, 71, 0.91);
     //color: rgb(88, 113, 250);
     margin: 2.5% 0 2% 0;
@@ -35,7 +35,7 @@
 }
 
 .divider {
-    font-size: 200%;
+    font-size: 3vw;
     font-weight: bold;
     margin: 0;
 
@@ -45,7 +45,7 @@
 }
 
 .phone {
-    font-size: 150%;
+    font-size: 1.9vw;
 
     margin: 0% 3% 0% 2vw; //36.5vw;
     white-space: nowrap;
@@ -81,7 +81,8 @@
 .bottom_txt_1, .bottom_txt_2 {
     margin: 0.3% 0;
     color: rgba(117, 117, 117, 0.664);
-    z-index: 200;
+    z-index: 101;
+    font-size: 1.2vw;
 }
 
 .bottom_txt_1 {

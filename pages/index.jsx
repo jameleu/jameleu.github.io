@@ -7,18 +7,17 @@ import n_styles from '../components/name.module.scss';
 import is_visible from '../components/is_visible.js';
 import { animated, useSpring, useChain, useSpringRef, SpringRef } from "react-spring";
 import Intro_Bio from '../components/intro_bio';
-import { SlideLButton3D, SlideSButton3D, FillRectButton3D } from '../components/button_3d';
+import { SlideLButton3D, SlideTButton3D, SlideSButton3D, FillRectButton3D } from '../components/button_3d';
 import BubbleLine from "../components/bubbles.jsx";
 
 import React, { useState, useRef, useEffect } from 'react';
-import FloatingBlocks from '../components/floating_blocks';
 import Typewriter from '../components/typewriter';
 
 import FloatingBubbles from '../components/floating_bubbles';
-import { Carousel } from '../components/carousel';
-import { exp_card_list } from '../components/card_list';
 import ToTopButton from '../components/to_top_button.jsx';
 import Progress from '../components/progress.jsx';
+
+import ParallaxCarousel from '../components/parallax_carousel';
 
 //import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
@@ -157,44 +156,59 @@ export default function Home() {
 
   return (
     <div className={styles.outer}>
+      <Head>
+          <title>{siteTitle}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      </Head>
       <div className={styles.background}> 
         <div className={styles.background_inner}>
           <p className={styles.title_hi}> Hi! </p>
         </div>
       <Progress></Progress>
       <Layout home>
+        
 
       <div className={styles.foreground}>
 
-        <Head>
-          <title>{siteTitle}</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        </Head>
-        <section>
-          <div id={styles.my_text}>
-            <animated.p style={appear_from_left}> M </animated.p> 
-            <div ref={target_ref} />
-            <animated.p style={appear_from_right}> y </animated.p> 
+        <div className={styles.border}> </div>
 
+        <section className={n_styles.self_introduction}>
+          <div className={n_styles.name_statement_wrapper}>
+            <div className={n_styles.my_name_wrapper}>
+              <div id={n_styles.my_text}>
+                <animated.p style={appear_from_left}> M </animated.p> 
+                <div ref={target_ref} />
+                <animated.p style={appear_from_right}> y </animated.p> 
+
+              </div>
+              <div id={n_styles.name_text}>
+                <animated.p style={appear_from_top}> N </animated.p> 
+                <div ref={target_ref} />
+                <animated.p style={appear_from_down}> a </animated.p> 
+                <animated.p style={appear_from_top}> m </animated.p> 
+                <animated.p style={appear_from_down}> e </animated.p> 
+                <animated.p style={appear_from_down}> 's </animated.p> 
+              </div>
+            </div>
+            <div className={n_styles.first_name}>
+              <p className={f_name_is_visible ? n_styles.name_1 : n_styles.name_base}>J</p>
+              <div ref={f_name_ref} />
+              <p className={f_name_is_visible ? n_styles.name_2 : n_styles.name_base}>a</p>
+              <p className={f_name_is_visible ? n_styles.name_3 : n_styles.name_base}>m</p>
+              <p className={f_name_is_visible ? n_styles.name_4 : n_styles.name_base}>e</p>
+              <p className={f_name_is_visible ? n_styles.name_5 : n_styles.name_base}>s</p>
+              <p className={f_name_is_visible ? n_styles.exclam : n_styles.name_base}>!</p>
+            </div>
           </div>
-          <div id={styles.name_text}>
-            <animated.p style={appear_from_top}> N </animated.p> 
-            <div ref={target_ref} />
-            <animated.p style={appear_from_down}> a </animated.p> 
-            <animated.p style={appear_from_top}> m </animated.p> 
-            <animated.p style={appear_from_down}> e </animated.p> 
-            <animated.p style={appear_from_down}> 's </animated.p> 
-
-          </div>
-
-          <div className={n_styles.first_name}>
-            <p className={f_name_is_visible ? n_styles.name_1 : n_styles.name_base}>J</p>
-            <div ref={f_name_ref} />
-            <p className={f_name_is_visible ? n_styles.name_2 : n_styles.name_base}>a</p>
-            <p className={f_name_is_visible ? n_styles.name_3 : n_styles.name_base}>m</p>
-            <p className={f_name_is_visible ? n_styles.name_4 : n_styles.name_base}>e</p>
-            <p className={f_name_is_visible ? n_styles.name_5 : n_styles.name_base}>s</p>
-            <p className={f_name_is_visible ? n_styles.exclam : n_styles.name_base}>!</p>
+          <div className={n_styles.profile_wrapper}>
+          <Image
+                  priority
+                  src="/images/profile_picture.jpg"
+                  height={216}
+                  width={216}
+                  layout="responsive"
+                  alt="profile_picture.jpg"
+            />
           </div>
         </section>
 
@@ -203,53 +217,40 @@ export default function Home() {
         <section>
           <Intro_Bio/>
         </section>
-        <section>
-          <Carousel cards= {exp_card_list} />
+        </div>
+        <ParallaxCarousel/>
+        <div className={styles.foreground}>
+        <section className={styles.col_sect_a0}>
+          <p className={styles.centered_h1}> Example of My Skills: </p>
           <FloatingBubbles/>
         </section>
-        <section>
+        <section className={styles.col_sect_b}>
           <Typewriter text_list={coding_list} duration={"12s"}/>
-          <SlideLButton3D text={"See my code!"}> </SlideLButton3D>
+          <div className={styles.centered}>
+            <div className={styles.code_button}>
+              <SlideLButton3D className={styles.code_button} text={"See my code!"}> </SlideLButton3D>
+            </div>
+          </div>
         </section>
-        <section className={styles.hobbies} ref={hobbies_ref}>
-          <animated.p style={hobbies_style}> ZoomiN/FadeIn: These are some other things that I enjoy, too: </animated.p> 
+        <section className={styles.col_sect_a} ref={hobbies_ref}>
+          <animated.p style={hobbies_style} className={styles.centered_h1}> These are some other things that I enjoy: </animated.p> 
+          <div className={styles.rows}>
+              <FillRectButton3D text={"Writing (Reviews)"}/>
+              <SlideTButton3D text={"Baking"}/>
+              <SlideSButton3D text={"Composing Music"}/>
+          </div>
         </section>
-        <br></br>
-
-        <section ref={contact_ref}>
-            <animated.div style={contact_styles} className={styles.test2}>
-              <div className={styles.float}>
-                <FillRectButton3D text={"Let's Connect!"}> </FillRectButton3D>
-              </div>
-            </animated.div>
-            
-
-
+        <section ref={contact_ref} className={styles.col_sect_b}>
+            <div className={styles.centered}>
+              <animated.div style={contact_styles}>
+                <p className={styles.centered_h1}> I'd love to meet you to discuss coding, careers, and more! </p>
+                <div className={styles.float}>
+                  <FillRectButton3D text={"Let's Connect!"}/>
+                </div>
+              </animated.div>
+            </div>
         </section>
-        <section>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-        
-        </section>
-
+        <div className={styles.empty_space}></div>
     </div>
     </Layout>
     <ToTopButton></ToTopButton>

@@ -1,0 +1,8 @@
+1. fix hi so fades
+2. make look better
+3. update carousel
+4. update w/info
+5. add links to buttons
+6. add section backgrounds
+7. add orange gradient only at beginning
+8. fix glow effect

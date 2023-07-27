@@ -149,6 +149,7 @@ export default function FloatingBubbles() {
                   height={108}
                   width={108}
                   alt="text_bubble.png"
+                  unoptimized
             />
             <div className={styles.des}> {bubble.desc} </div>
                   

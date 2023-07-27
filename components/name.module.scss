@@ -1,13 +1,59 @@
 
+#my_text, #name_text {
+    max-width: 42%;
+    height: 22vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10vw;
+    margin: 0 auto;
+    color: rgba(255, 97, 97, 0.726);
+}
+
+#my_text {
+    margin-top: 2%;
+    max-width: 22%;
+}
+
+.name_statement_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.my_name_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.self_introduction {
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 2% 0% 2%;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: 85vh;
+}
+
+.profile_wrapper {
+    width: 30vw;
+    height: 30vw;
+}
+
 .first_name { //will be a little off center since ! is being treated as if it were not in this div due to name letter width
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 17rem;
-    max-width: 55%;
+    font-size: 12vw;
+    width: 35%;
     margin: 0% auto 10% auto;
-    --text_color: rgba(130, 228, 223, 0.925);
-
+    --text_color: rgba(30, 163, 156, 0.925);
+    transform: translateX(-15%); //to offset exclamation mark sticking out of this div
 }
 
 .name_base {
