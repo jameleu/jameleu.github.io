@@ -36,9 +36,11 @@
   }
   .slide_block {
     display: block;
-    height: var(--slide-height);
+    // height: var(--slide-height);
+    width: 85%; //due to embla library, 100% makes width larger than container
+    transform: translateX(1vw); //once shrink, move over to the right so is centered
     background-color: lightgrey;
-    padding: 1vw 4.5vw 1.5vw 4.5vw; //bottom is 1.5vw to account for dot buttons
+    padding: 1vw 4.5vw 4vw 4.5vw; //bottom is 1.5vw to account for dot buttons
     object-fit: cover;
     border-radius: 3% / 20%;
 
