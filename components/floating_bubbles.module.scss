@@ -7,7 +7,6 @@
   height: 10vw;
   width: 10vw;
   margin-left: -2vw; //shift left all a bit so do not have to manually edit their specific positions
-
   // margin-right: 20px;
   position: absolute;
   //so pops in when page loads (?)
@@ -105,8 +104,8 @@
 
 .bubbles {
   height: 80vh;
-  overflow: hidden;
   position: relative;
+  margin-bottom: 1vw;
 }
 
 .bubbles-wrapper {
@@ -114,4 +113,20 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .bubbles {
+    height: 65vh;
+  }
+  .bubble {
+    height: 12vw;
+    width: 12vw;
+    margin-left: -3.5vw; //offset not having as much room on right as usual
+  }
+  .bubble:hover {
+    margin-top: -5px;
+    width: 12.5vw;
+    height: 12.5vw;
+  }
 }

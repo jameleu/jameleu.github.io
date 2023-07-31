@@ -1,18 +1,21 @@
   .container { //holds .text html object and sets positioning and style of text
-    margin: 0;
-    min-height: 20vh;
+    margin: 0 auto;
+    height: 12vw;
+    width: 96%;
+    border-radius: 5% / 30%;
     display: grid;
     align-content: space-around;
     background: var(--bg-color);
-    --bg-color: hsl(49 37% 94%);
+    --bg-color: hsl(49, 35%, 94%);
+    box-shadow: 0 0 0.2rem .12rem var(--bg-color);
   }
   
   .text { //style for text-based tag
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-family: "Source Code Pro", monospace;
     position: relative; //important for ::after size so that TRBL can be used
     width: max-content; //to prevent wrapping
-    margin: auto 28%; //determines left starting pos
+    margin: auto 12%; //determines left starting pos
   }
   
   .text::before, //block to hide the text initially

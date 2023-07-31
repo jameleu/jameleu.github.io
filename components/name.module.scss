@@ -1,17 +1,17 @@
 
 #my_text, #name_text {
     max-width: 42%;
-    height: 22vh;
+    height: 12vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 10vw;
     margin: 0 auto;
-    color: rgba(255, 97, 97, 0.726);
+    color: rgba(222, 85, 85, 0.726);
 }
 
 #my_text {
-    margin-top: 2%;
+    margin-top: 1.5vw;
     max-width: 22%;
 }
 
@@ -37,7 +37,7 @@
     align-items: center;
     padding-right: 5%;
     padding-left: 5%;
-    height: 85vh;
+    height: 40vw;
 }
 
 .profile_wrapper {

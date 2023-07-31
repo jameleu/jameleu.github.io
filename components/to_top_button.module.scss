@@ -29,7 +29,7 @@
   }
   
   .cube_wrap {
-    --size: 12vmin;
+    --size: 7vw;
     position: fixed;
     width: 0;
     height: 0;
@@ -38,6 +38,7 @@
     bottom: 15%;
     right: 8%;
   }
+
   
   .to_top {
     position: fixed;
@@ -45,8 +46,8 @@
 
     text-align: center;
 
-    height: 7vmin;
-    width: 7vmin;
+    height: 4vw;
+    width: 4vw;
     background-color: rgba(250, 248, 237, 0.774);
     box-shadow: 1px 1px 6px -2px black;
     border-radius: 9999px;
@@ -68,10 +69,20 @@
   }
 
   .to_top_text {
-    font-size: 0.7rem;
+    font-size: 0.8vw;
     margin: 0;
-    transform: translateY(-0.7vh);
+    transform: translateY(-0.7vw);
     font-family: Garamond;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .cube_wrap {
+      right: 12%;
+    }
+    .to_top {
+      right: 11%;
+      bottom: 13.5%;
+    }
   }
   
   @keyframes jump {
@@ -108,6 +119,7 @@
       transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
     }
   }
+
   
   .top, .bottom, .front, .back, .left, .right {
     position: absolute;

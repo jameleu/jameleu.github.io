@@ -8,20 +8,20 @@ export default function BubbleLine() {
         //create bubble
         const curr_bubble = document.createElement("span");
         
-        const max_bubble_size = 3;
+        const max_bubble_size = 4;
 
         var bubble_size = Math.random() * max_bubble_size;
         
         //set current bubble's attributes and add it to the container
         curr_bubble.className=styles.bubble;
-        curr_bubble.style.width = bubble_size + "rem";
-        curr_bubble.style.height = bubble_size + "rem";
+        curr_bubble.style.width = bubble_size + "vw";
+        curr_bubble.style.height = bubble_size + "vw";
         curr_bubble.style.left = Math.random() * innerWidth + "px";
         cont_ref.current.appendChild(curr_bubble);
 
         setTimeout(() => {
             curr_bubble.remove();
-        }, 6000); //get rid of bubble after _ ms
+        }, 10000); //get rid of bubble after _ ms
     }
 
     useEffect( () => {

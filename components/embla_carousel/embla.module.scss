@@ -1,0 +1,172 @@
+.embla {
+    --slide-spacing: 1rem;
+    --slide-size: 100%;
+    --slide-height: 20vh;
+    --brand-primary: rgb(238, 255, 127);
+    --brand-secondary: rgb(85, 255, 204);
+    // padding: 1.5vw;
+    // background-color: rgb(192, 111, 18);
+    // border: 0.15rem outset rgba(222, 222, 222, 0.32);
+    // border-radius: 5% / 15%; 
+    width: 70vw;
+    position: relative;
+    margin-left: -5vw; //move the whole container left without transform
+    display: flex;
+    justify-content: space-between;  //to make sure arrows are at edges
+    align-items: center;
+  }
+  .embla__viewport {
+    overflow: hidden;
+  }
+  .embla__container {
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y;
+    margin-left: -1vw; //centers carousel slides
+  }
+  .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    position: relative;
+    cursor: grab;
+  }
+  .embla__slide:active { //when it is being grabbed
+    cursor: grabbing;
+  }
+  .slide_block {
+    display: block;
+    height: var(--slide-height);
+    background-color: lightgrey;
+    padding: 1vw 4.5vw 1.5vw 4.5vw; //bottom is 1.5vw to account for dot buttons
+    object-fit: cover;
+    border-radius: 3% / 20%;
+
+  }
+//   .embla__slide__number {
+//     width: 4.6rem;
+//     height: 4.6rem;
+//     z-index: 1;
+//     position: absolute;
+//     top: 0.6rem;
+//     right: 0.6rem;
+//     border-radius: 50%;
+//     background-color: rgba(var(--background-site-rgb-value), 0.85);
+//     line-height: 4.6rem;
+//     font-weight: 900;
+//     text-align: center;
+//     pointer-events: none;
+//   }
+//   .embla__slide__number > span {
+//     color: var(--brand-primary);
+//     background-image: linear-gradient(
+//       45deg,
+//       var(--brand-primary),
+//       var(--brand-secondary)
+//     );
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     font-size: 1.6rem;
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//   }
+  .embla__button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  //for positioning
+  .prev {
+    z-index: 2;
+    position: absolute;
+    left: 0vw;
+  }
+  .next {
+    z-index: 2;
+    position: absolute;
+    right: 0vw;
+  }
+
+  .embla__button {
+    z-index: 1;
+    color: var(--background-site);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+  }
+  .embla__button:disabled {
+    opacity: 0.3;
+  }
+  .embla__button__svg {
+    width: 65%;
+    height: 65%;
+  }
+  .embla__dot {
+    -webkit-appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .embla__dots {
+    z-index: 1;
+    bottom: 1.6rem;
+    position: absolute;
+    left: 26vw;
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+  }
+  .selected {
+    width: 2vw;
+    height: 0.4vw;
+    border-radius: 10% / 40%;
+
+    border: 1px solid;
+    background: linear-gradient(
+      45deg,
+      var(--brand-primary),
+      var(--brand-secondary)
+    );
+    cursor: not-allowed;
+  }
+
+  .not_selected {
+    width: 2vw;
+    height: 0.4vw;
+    background-color: transparent;
+    border-radius: 10% / 40%;
+    border: 1px solid;
+    cursor: pointer;
+
+
+  }
+  
+  .s_header {
+    font-size: 4vw;
+  }
+
+  .s_text {
+    font-size: 1.5vw;
+  }

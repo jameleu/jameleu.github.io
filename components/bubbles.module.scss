@@ -48,6 +48,11 @@
     background: radial-gradient(rgba(231, 231, 231, 0.425), transparent);
 }
 
+@media screen and (max-width: 700px) {
+    .bubble {
+        animation: rise_smaller_screen 5.5s linear infinite;
+    }
+}
 
 //rise, rotate, and near the end, start to disappear
 @keyframes rise {
@@ -56,14 +61,33 @@
         transform: translateY(0%) rotateX(0deg);
     }
     50% {
-        transform: translateY(-370%) rotate(180deg);
+        transform: translateY(-250%) rotate(180deg);
+        opacity: 0.75
     }
-    70% {
-        opacity: 1;
+    60% {
+        opacity: 0.75;
     }
     100% {
         opacity: 0;
-        transform: translateY(-600%) rotate(360deg);
+        transform: translateY(-400%) rotate(360deg);
     }
 }
 
+//rise, rotate, and near the end, start to disappear for less wide screens
+@keyframes rise_smaller_screen {
+
+    0% {
+        transform: translateY(0%) rotateX(0deg);
+    }
+    50% {
+        transform: translateY(-500%) rotate(180deg);
+        opacity: 0.75
+    }
+    55% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-850%) rotate(360deg);
+    }
+}

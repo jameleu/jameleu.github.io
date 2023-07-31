@@ -9,12 +9,21 @@
 .slides_container {
     background-color: lightgreen;
     font-size: 10rem;
+    //determines size of slides:
+    height: 90%;
+    width: 100%;
+
     display: flex;
+    align-items: center;
+    align-content: center;
 }
 
 .slide {
     flex: 0 0 100%;
     min-width: 0;
-    width: 40%;
+    border: 10px;
+    border-color: black;
+    height: 100%;
+    //width is inherited
     background-color: red;
 }

@@ -1,8 +1,15 @@
-1. fix hi so fades
-2. make look better
-3. update carousel
+d1. fix hi so fades
+2. make look better / add section backgrounds
+d3. update carousel
 4. update w/info
-5. add links to buttons
-6. add section backgrounds
-7. add orange gradient only at beginning
-8. fix glow effect
+d5. add links to buttons
+d6. add orange gradient only at beginning
+c7. fix glow effect //commented out
+d8.fix horizontal bar
+9. fix phone display errors
+
+ deploy
+
+ other ideas:
+ add baked goods that rise up
+ table of contents on side or something

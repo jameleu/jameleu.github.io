@@ -32,7 +32,7 @@
         transform: translateX(0vw);
         opacity: 1;
     }
-    70% {
+    78% {
         transform: translateX(0vw);
         opacity: 1;
     }
@@ -64,7 +64,7 @@
 
     animation: logo_anim 1s linear forwards;
     animation-play-state: paused; //is paused without scroll
-    animation-delay: calc(var(--curr_scroll_2) * -1.2s);
+    animation-delay: calc(var(--curr_scroll) * -1.2s);
     animation-iteration-count: 1; //number of animations possible with scrolling down
 
     margin-top: 25vh;
@@ -97,12 +97,23 @@
         transform: rotate(0deg);
     }
     70% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    90% {
         transform: rotate(210deg);
-        opacity: 0.02;
+        opacity: 0.2;
     }
     100% {
+        opacity: 0;
         transform: rotate(310deg);
         
     }
 }
 
+.hitbox {
+    background-color: red;
+    margin: 0 auto;
+    height: 0vw;
+    width: 0vw;
+}
