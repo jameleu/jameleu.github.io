@@ -168,11 +168,6 @@ export default function Home() {
 
   return (
     <div className={styles.outer}>
-      
-      <Head>
-          <title>{siteTitle}</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-      </Head>
       <div className={styles.background}> 
 {/*       
         <section style={appear} className={styles.moving_background}>
