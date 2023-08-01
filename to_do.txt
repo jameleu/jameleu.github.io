@@ -1,6 +1,0 @@
-1a. fix all animations and texts so they work on most screens
-2c. fill in with real text
-3a. adjust actual fonts and add actual hobbies buttons
-4b. fix carousel and cards
-5b. add footer
-6b. add header
