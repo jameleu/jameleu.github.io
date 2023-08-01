@@ -12,7 +12,15 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         <title>{siteTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png"/>
+        <link rel="manifest" href="/public/site.webmanifest"/>
+        <link rel="mask-icon" href="/public/safari-pinned-tab.svg" color="#5bbad5"/>
+        <link rel="shortcut icon" href="/public/favicon.ico"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name="msapplication-config" content="/public/browserconfig.xml"/>
+        <meta name="theme-color" content="#ffffff"></meta>
         <meta
           name="description"
           content="A website to highlight James Leung and his goals, values, and acomplishments."
