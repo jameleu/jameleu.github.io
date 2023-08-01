@@ -141,7 +141,9 @@ export default function FloatingBubbles() {
                    opacity: is_ready ? 1 : 0, //fade in when animation is ready
                   transform: `translate(${bubble.x}px, ${bubble.y}px) scale(${bubble.s})`,
                 }}>
-                  <div className={styles.hitbox}> <div className={styles.popup}> 
+                  <div className={styles.hitbox}> <div className={styles.popup} style={{
+                    height: bubble.box_height
+                  }}> 
                   <Image
                   priority
                   src="/images/text_bubble1.png"

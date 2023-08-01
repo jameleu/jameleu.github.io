@@ -21,7 +21,7 @@
 }
 
 .bubble:hover {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(243, 243, 243);
     height: 11vw; //scale up a bit
     width: 11vw;
     margin-top: -2vh; //move up
@@ -60,7 +60,7 @@
 //for text inside the circular bubble
 .bbl_txt {
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.8vw;
   width: 100%;
   border-radius: 50%; 
   
@@ -77,11 +77,12 @@
 
 //for the text in the text bubble
 .des {
-  font-size: 2vw;
+  font-size: 1.8vw;
   width: 85%;
-  height: 100%;
+  max-height: 130%;
   position: absolute;
-  transform: translate(1vw, 5vh);
+  left: 1.6vw;
+  top: 5vh;
   z-index: 5;
 }
 
@@ -92,7 +93,7 @@
   transform: translate(8vw, 6vw);
   pointer-events: none;
   width: 15vw;
-  height: 15vw;
+  // height: 15vw; //is set by bubble_pos.jsx for each bubble
 
   opacity: 1;
   z-index: 3; 
