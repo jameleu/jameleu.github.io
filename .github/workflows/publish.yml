@@ -4,8 +4,8 @@ on:
   push:
     branches: ["main"]
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.PAGES_DEPLOYMENT }} #CHANGE TO PROPER SECRET NAME
+# env:
+#   NODE_AUTH_TOKEN: ${{ secrets.PAGES_DEPLOYMENT }} #CHANGE TO PROPER SECRET NAME
 
 permissions:
   contents: read
@@ -74,7 +74,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
-    #NEXT BUILD GIVES OUT FOLDER WITH STATIC SITE
+    #NEXT BUILD CREATES STATIC VER OF WEBSITE IN OUT FOLDER
   # Deployment job
   deploy:
     environment:
