@@ -1,6 +1,6 @@
 .outer {
     padding: 0;
-    width: 101.5%; //to eliminate white padding that appears for some reason
+    width: 101.3%; //to eliminate white padding that appears for some reason
     margin: -2vw -2vh;
     --top_height: 100vh;
 
@@ -95,9 +95,9 @@
     top: 0;
     background-color: transparent;
     height: 50vh;
-    width: 100%;
+    width: 100.2%; //to match background size
     //for shadow on inside
-    box-shadow: inset 2.5rem 10rem 15rem -8rem rgba(255, 153, 58, 0.89);
+    box-shadow: inset 0.5vw 30vh 20vh -23vh rgba(255, 153, 58, 0.89);
 
 }
 

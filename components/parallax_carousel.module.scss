@@ -5,7 +5,7 @@
     animation-play-state: paused; //is paused without scroll
     animation-delay: calc(var(--curr_scroll_3) * -1.2s); //calculates based on scroll var times -2s 
     //more negative time = faster animation goes with scroll
-    
+    pointer-events: none; //animation will make it interactive when visible; this is when it is not
     animation-iteration-count: 1; //number of animations possible with scrolling down
 
     opacity: 0;
@@ -13,7 +13,7 @@
 
 .fixed_wrapper {
     position: fixed;
-    top: -4vw;
+    top: -10vw;
     left: 1vw;
     padding: 0;
     z-index: 0;

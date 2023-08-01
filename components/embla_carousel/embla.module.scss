@@ -42,7 +42,8 @@
     background-color: lightgrey;
     padding: 1vw 4.5vw 4vw 4.5vw; //bottom is 1.5vw to account for dot buttons
     object-fit: cover;
-    border-radius: 3% / 20%;
+    height: 22vw;
+    border-radius: 5% / 20%;
 
   }
 //   .embla__slide__number {
@@ -161,14 +162,37 @@
     border-radius: 10% / 40%;
     border: 1px solid;
     cursor: pointer;
-
-
   }
   
   .s_header {
     font-size: 4vw;
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
   }
 
-  .s_text {
+  // .s_text {
+  //   font-size: 1.5vw;
+  // }
+
+  .blt_img_cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .blt_pnt {
+    width: 100%;
     font-size: 1.5vw;
+  }
+
+  .inv { //makes text invisible and small
+    font-size: 0vw;
+    color: transparent;
+  }
+
+  .img {
+    float: left;
+    height: 20%;
+    width: 20%;
+    margin: 0 4vw 0 0;
+    opacity: 1;
   }

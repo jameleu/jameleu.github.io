@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { DotButton, useDotButton } from './dot_buttons.jsx'
 import styles from './embla.module.scss'
+import Image from 'next/image'
 import {
   PrevButton,
   NextButton,
@@ -43,7 +44,28 @@ const EmblaCarousel = (props) => {
               </div> */}
               <div className={styles.slide_block}>
                 <div className={styles.s_header}> {obj.header} </div>
-                <div className={styles.s_text}> {obj.text} </div>
+                <div className={styles.blt_img_cont}>
+                <ul className={styles.blt_set}>
+                  <li className={styles.inv}>  {obj.img != "null" ?  
+                  <div className={styles.img}>
+                    <Image
+                    priority
+                    src={obj.img}
+                    height={216}
+                    width={216}
+                    layout="responsive"
+                    alt="experiences_picture.png"
+                    />
+                  </div>
+                  : <div/>} </li>
+                  {obj.text.map((bullet_point) => (
+                    <li className={styles.blt_pnt}> {bullet_point} </li>
+                  ))}
+                 
+                </ul>
+                
+                </div>
+                {/* {<div className={styles.s_text}> {obj.text} </div>} */}
               </div>
             </div>
           ))}

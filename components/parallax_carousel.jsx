@@ -8,18 +8,24 @@ export default function ParallaxCarousel() {
     const p_ref_end = useRef();
 
     const my_slides = [
-        {"header": "MRobosub SLURM", 
-        "text": "TEXT" },
-        {"header": "Northrop Grumman Test Bots", 
-        "text": ["Caught 104+ minor and 11 integral defects in secret software with Python Robot WhiteLibrary/Sikuli bots", "Queried database w/SQL to fetch validation data for testing & handled it w/hash tables, binary search, csv parsing", "Wrote Python-Regexp script that corrects XML files. On 10,000 line file, made 114,286+ (<=5s runtime).", "Gained experience w/working on teams that use clearcase, Agile, Scrums, code showcases/review/refactoring, git"]},
         {"header": "Northrop Grumman XML Parser and Corrector", 
-        "text": "TEXT"},
+        "text": ["test"],
+        "img" : "/images/profile.jpg"},
+        {"header": "MRobosub SLURM", 
+        "text": ["test"],
+        "img" : "/images/profile.jpg"},
+        {"header": "Northrop Grumman Test Bots", 
+        "text": ["Caught 104+ minor and 11 integral defects in secret software with Python Robot WhiteLibrary/Sikuli bots", "Queried database w/SQL to fetch validation data for testing & handled it w/hash tables, binary search, csv parsing", "Wrote Python-Regexp script that corrects XML files. On 10,000 line file, made 114,286+ (<=5s runtime).", "Gained experience w/working on teams that use clearcase, Agile, Scrums, code showcases/review/refactoring, git"],
+        "img" : "/images/profile.jpg"},
         {"header": "MRobosub Website", 
-        "text": "TEXT"},
+        "text": ["test"],
+        "img" : "/images/profile.jpg"},
         {"header": "Personal Website", 
-        "text": "TEXT"},
+        "text": ["test"],
+        "img" : "null"},
         {"header": "Various School Projects", 
-        "text": "TEXT"},
+        "text": ["test"],
+        "img" : "null"},
     ];
 
     useEffect( () => {
