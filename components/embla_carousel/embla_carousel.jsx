@@ -49,12 +49,13 @@ const EmblaCarousel = (props) => {
                   <li className={styles.inv}>  {obj.img != "null" ?  
                   <div className={styles.img}>
                     <Image
+                    className={styles.rounded}
                     priority
                     src={obj.img}
                     height={216}
                     width={216}
-                    layout="responsive"
                     alt="experiences_picture.png"
+                    layout="responsive"
                     />
                   </div>
                   : <div/>} </li>
