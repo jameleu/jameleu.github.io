@@ -67,7 +67,7 @@ export default function Home() {
   });
 
 
-  const t_start = "50vh";
+  const t_start = "60vmin";
   const g_opacity = 0;
   const t_ref = useSpringRef();
   const appear_from_top = useSpring( {
@@ -75,18 +75,18 @@ export default function Home() {
     config: {mass: 2.5, tension: 60, friction: 17},
     from: {opacity: g_opacity, y: t_start}, 
     to: {opacity: target_is_visible ? 1 : g_opacity,
-         y: target_is_visible ? "0vh" : t_start
+         y: target_is_visible ? "0vmin" : t_start
         }
   });
 
-  const d_start = "-50vh";
+  const d_start = "-40vmin";
   const d_ref = useSpringRef();
   const appear_from_down = useSpring( {
     ref: d_ref,
     config: {mass: 1, tension: 70, friction: 5},
     from: {opacity: g_opacity, y: d_start}, 
     to: {opacity: target_is_visible ? 1 : g_opacity,
-         y: target_is_visible ? "0vh" : d_start
+         y: target_is_visible ? "0vmin" : d_start
         }
   });
 
@@ -245,7 +245,7 @@ export default function Home() {
             <Typewriter text_list={coding_list} duration={"12s"}/>
             <div className={styles.centered}>
               <div className={styles.code_button}>
-                <SlideLButton3D className={styles.code_button} text={"See my code!"} link={"https://google.com"}> </SlideLButton3D>
+                <SlideLButton3D className={styles.code_button} text={"See my code!"} link={"https://docs.google.com/document/d/1-MAY-LXknfHSTmLBcJ8PC7YlMopGt07p4Cl6EZ08K2o/edit?usp=sharing"}> </SlideLButton3D>
               </div>
             </div>
           </section>
@@ -270,6 +270,7 @@ export default function Home() {
                   <p className={styles.centered_h1}> I'd love to meet you to discuss coding, careers, and more! </p>
                   <div ref={contact_ref} className={styles.float}>
                     <FillRectButton3D text={"Let's Connect!"} link={"mailto:jleung2101@gmail.com"}/>
+                  
                   </div>
                   </div>
                 </animated.div>
