@@ -102,7 +102,7 @@ export const bubbles = [
       y: 111,
       skill: "C++/C",
       desc: "In: BST, OOP, hash table, stack/queue, cache, pipelining projects",
-      box_height: "15vw"
+      box_height: "28vmin"
 
     },
     {
@@ -120,7 +120,7 @@ export const bubbles = [
       y: 367,
       skill: "Python",
       desc: "In: Northrop Grumman and MRobosub: bots, scripts, ML",
-      box_height: "15vw"
+      box_height: "24vmin"
       
     },
   ];
