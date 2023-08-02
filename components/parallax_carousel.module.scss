@@ -35,7 +35,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 90%;
-    margin: 10% auto 4% auto;  
+    margin: 10% auto 2% auto;  
 }
 
 .header_reason_T {
@@ -44,7 +44,7 @@
 
     width: 85%;
 
-    margin: 2% 0% 2% 5%;
+    margin: 2% 0% 0.75% 5%;
 
     // box-shadow: 0.7rem 0.2rem 1rem 0rem rgba(128, 128, 128, 0.75);
 
@@ -55,12 +55,12 @@
         opacity: 0;
         pointer-events: none; //no interactivity
     }
-    15% {
+    2% {
         opacity: 0;
         pointer-events: none;        
     }
-    25% {
-        opacity: 0.3;
+    3% {
+        opacity: 0.2;
         pointer-events: none;        
     }
     55% {
