@@ -42,7 +42,7 @@
     background-color: lightgrey;
     padding: 1vw 4.5vw 4vw 4.5vw; //bottom is 1.5vw to account for dot buttons
     object-fit: cover;
-    height: 22vw;
+    height: 24.5vw;
     border-radius: 5% / 20%;
 
   }
@@ -165,9 +165,10 @@
   }
   
   .s_header {
-    font-size: 4vw;
-    margin-top: 1vmin;
-    margin-bottom: 1vmin;
+    font-size: 3.2vw;
+    margin-top: 2vmin;
+    line-height: 5vmin;
+    margin-bottom: 2vmin;
   }
 
   // .s_text {
@@ -184,8 +185,8 @@
     font-size: 1.5vw;
   }
 
-  .inv { //makes text invisible and small
-    font-size: 0vw;
+  .inv { //makes text invisible and small. height cannot be 0.
+    font-size: 0.1vw;
     color: transparent;
   }
 
@@ -193,6 +194,11 @@
     float: left;
     height: 20%;
     width: 20%;
-    margin: 0 4vw 0 0;
+    margin: 0 3.2vw 0.2vmin -1.5vw; //move left and also have space around bot/right
     opacity: 1;
+  }
+
+  .rounded {
+    border-radius: 10% / 15%;
+    // box-shadow: 0rem 0rem 2rem 0rem rgba(110, 110, 110, 0.445);
   }
