@@ -15,7 +15,7 @@ export default function Footer() {
                 <a className={style.email} href= "mailto:jameleu@umich.edu" > jameleu@umich.edu </a>
             </div>
             <div className={style.socials}>
-            <IconContext.Provider value={{ color: 'rgb(150, 148, 174)', style: {fontSize: "3vw"}}}>
+            <IconContext.Provider value={{ color: 'rgb(150, 148, 174)', style: {fontSize: "3vmax"}}}>
             <a className={style.social} href="https://github.com/jameleu" target="_blank"> <AiFillGithub className={style.icon}> </AiFillGithub> </a>
                 <a className={style.social} href="https://www.linkedin.com/in/jameleu/" target="_blank"> <AiFillLinkedin className={style.icon}></AiFillLinkedin> </a>
             </IconContext.Provider>
