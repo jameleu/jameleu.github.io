@@ -62,11 +62,12 @@ export default function FloatingBubbles() {
       );
 
     const [is_ready, setReady] = useState(false);
+    var iteration = 0;
 
     //initial delay to start animation
     useEffect( () => {
-        setTimeout(start, 500); //start animation after _ ms since on start up, looks a bit choppy
-    }, [])
+        setTimeout(start, 800); //start animation after _ ms since on start up, looks a bit choppy
+    }, [is_ready])
 
     //startup function that calls the animation and makes the bubles visible based on state
     const start = () => {
@@ -96,12 +97,12 @@ export default function FloatingBubbles() {
             if(!is_hovered_over) {
                 newNoiseSeedX = bubble.noiseSeedX + NoiseSpeed;
                 newNoiseSeedY = bubble.noiseSeedY + NoiseSpeed; //update seed
-        
+                
                 const random_x = MoveAmount*noise.simplex2(newNoiseSeedX, 0); //random geneeration based on new seed based on last seed
                 const random_y = MoveAmount*noise.simplex2(newNoiseSeedY, 0);
                 new_y = bubble.y * Y_RATIO + random_y + NoiseAmount;
                 new_x = bubble.x * X_RATIO + random_x + NoiseAmount;
-
+               
                 if(curr_bubble) { 
                     //update next frame of animation for this bubble
                     curr_bubble.style.transform = `translate(${new_x}vw, ${new_y}vh) scale(${bubble.s})`;
@@ -119,9 +120,13 @@ export default function FloatingBubbles() {
               //x: (new_x < -200) ? CANVAS_WIDTH : new_x,
               xWithNoise: new_x,
               yWithNoise: new_y,
-            };
+             };
           });
-      
+        iteration += 1;
+        if(iteration > 5000000) { //reset animation after a while since bubbles will start to move too fast
+          setReady(false);
+          return;
+        }
         //animate next frame recursively
         requestAnimationFrame(animate)
 
