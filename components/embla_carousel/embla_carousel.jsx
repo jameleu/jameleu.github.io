@@ -32,7 +32,6 @@ const EmblaCarousel = (props) => {
     onPrevButtonClick,
     onNextButtonClick
   } = usePrevNextButtons(emblaApi, onButtonClick)
-
   return (
     <div className={styles.embla}>
       <div className={styles.embla__viewport} ref={emblaRef}>
@@ -47,7 +46,8 @@ const EmblaCarousel = (props) => {
                 <div className={styles.blt_img_cont}>
                 <ul className={styles.blt_set}>
                   <li className={styles.inv}>  {obj.img != "null" ?  
-                  <div className={styles.img}>
+                  <div className={styles.img} >
+                  {/* style={{height: "0%", float: obj.float}}> //maybe add in the future */}
                     <Image
                     className={styles.rounded}
                     priority
