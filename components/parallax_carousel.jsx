@@ -13,11 +13,11 @@ export default function ParallaxCarousel() {
             "Caught 104+ minor & 11 integral defects in map software w/Python-Robot automation bots that used image recognition (Sikuli) and Microsoft GUI component recognition (White Library) to navigate the map and menus to test features.",
             "Also automated typing and using mouse scroll to search and filter to verify querying features, saving the company $10k",
             "Fetched 100k+ entries w/SQL for testing validation data & accessed it w/hash tables, binary search, & csv parsing"
-            
-            
             ]
             ,
-            "img" : "/images/triton.png"},
+            "img" : "/images/triton.png",
+            "img_h" : "3000",
+            "float": "left"},
         {"header": "Northrop Grumman XML Corrector", 
         "text": 
             [
@@ -29,7 +29,10 @@ export default function ParallaxCarousel() {
             "Wrote detailed documentation on usage and maintainability"
             ]
             ,
-        "img" : "/images/ng.png"},
+        "img" : "/images/ng.png",
+        "img_h" : "216",
+        "float": "right"
+        },
         {"header": "MRobosub High Performance ML Training", 
         "text": 
             [
@@ -38,7 +41,10 @@ export default function ParallaxCarousel() {
             "Program allocates GPU/resources, adjusts settings based on parameters given, and trains ML model in a virtual environment multiple times with different settings if specified"
             ]
             ,
-        "img" : "/images/slurm.png"},
+        "img" : "/images/slurm.png",
+        "img_h" : "216",
+        "float": "left"
+        },
        
         {"header": "MRobosub Website", 
         "text": 
@@ -50,33 +56,37 @@ export default function ParallaxCarousel() {
             "Used Javascript promises for asynchronous transition"
             ]
             ,
-        "img" : "/images/mrobosub_logo.png"},
+        "img" : "/images/mrobosub_logo.png",
+        "img_h" : "216",
+        "float": "left"
+        },
         {"header": "Personal Website", 
         "text": 
             [
             "Coded in React, Next.js, JS, CSS, HTML. Embla is used for carousel formatting, but all other components (like carousel buttons) are made from scratch using math and code",
             "Coded formatting that adapts to screen size and containers, changing rule sets as needed",
-            "Designed realistic physics-based animations with React Spring and CSS animations that animate on scroll position, as well as object visibility calculated from window-object convergence",
+            "Designed realistic physics-based animations (React Spring) and CSS animations that animate on scroll position, as well as object visibility calculated from window-object convergence",
             "Tracked scroll position within whole container and sections of website using calculations with document offsets, reference top offsets, and inner/outer window size",
             "For the bubble's floating movement, used Perlin Noise to generate naturally smooth sequence of pseudo-random numbers to determine bubbles' position. Pop up text has adaptive size despite the lack of the usual hierarchical child to parent influenced sizing",
             "Created typewriter animation that uses before pseudo-element to hide the text and slowly reveal the text by an amount calculated to be one letters-width for the given font size."
             ]
             ,
         "img" : "null"},
-{"header": "Various School Projects (1)", 
+{"header": "School Projects: Data Structures and OOP", 
             "text": 
             [
             "Implemented Binary Search Tree Class To Create Map that I used to write a machine learning natural language processing program to label forum posts with a preset topic. Each post was treated as a bag of words, and the program utilized various logarithmic conditional probability formulas denominated by training posts to assign the most likely label for that post",
-            "Wrote seam-carving algorithm to turn image into abstract data type matrix, calculate the energy of each pixel as the squared difference between opposing neighboring pixels, calculate the cost of each pixel as the energy added to the minimum energy of its neighbors, and deleting the zig-zag column or row with the least total energy cost",
+            "Implemented query system using hash tables that inserted, deleted, and found where and all instances",
+            "Created survival game that handled enemy spawning and defeat with priority queues while also optimally calculating mean, median, and other statistics in constant time after each round",
             "Card trick taking game with AI utilizing object oriented programming in C++ with shuffling, recognized hands, special card hierarchy adaptive to the initial cards chosen, and different routes players can take based on their choices"
             ],
             "img" : "null"},
-        {"header": "Various School Projects (2)", 
-            "text": ["Implemented union-find algorithm, linked list with full library methods like delete and find and insert, 01-knapsack dynamic programming solution, self-balancing tree, string class, heaps, hash table with linear probing", 
-            "Implemented query system using hash tables that inserted, deleted, and found where and all instances",
-            "Created survival game that handled enemy spawning and defeat with priority queues while also optimally calculating mean, median, and other statistics in constant time after each round",
+        {"header": "School Projects: Algorithms, Misc.", 
+            "text": [
             "For exploration game where avoided obstacles and enemies while reaching the end, created graph search and route tracing bot with two operating modes: BFS and DFS",
-            "Implemented Prim's to get lower bound for branch and bound algorithm in order to calculate minimal path while visiting all points (TSP)"
+            "Implemented Prim's to get lower bound for branch and bound algorithm in order to calculate minimal path while visiting all points (TSP)",
+            "Wrote seam-carving algorithm to turn image into abstract data type matrix, calculate the energy of each pixel as the squared difference between opposing neighboring pixels, calculate the cost of each pixel as the energy added to the minimum energy of its neighbors, and deleting the zig-zag column or row with the least total energy cost",
+            "Implemented union-find algorithm, linked list with full library methods like delete and find and insert, 01-knapsack dynamic programming solution, self-balancing tree, string class, heaps, hash table with linear probing", 
             ],
         "img" : "null"},
 
