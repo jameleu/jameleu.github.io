@@ -30,7 +30,7 @@ export const bubbles = [
       y: 365,
       skill: "mySQL",
       desc: "In: Northrop Grumman test bots and shopping website project",
-      box_height: "12vmax"
+      box_height: "13vmax"
 
     },
     {
