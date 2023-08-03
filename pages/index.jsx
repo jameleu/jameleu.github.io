@@ -236,6 +236,7 @@ export default function Home() {
           </div>
           <ParallaxCarousel/>
           <div className={styles.foreground}>
+            <div className={styles.empty_space_2}> </div>
           <section className={styles.col_sect_a0}>
             <p className={styles.centered_h1}> Example of My Skills: </p>
             <FloatingBubbles/>
@@ -280,7 +281,7 @@ export default function Home() {
       </Layout>
       <ToTopButton></ToTopButton>
 
-      <Footer>      </Footer>
+      <Footer></Footer>
 
     </div>
 
