@@ -52,6 +52,9 @@
     .bubble {
         animation: rise_smaller_screen 5.5s linear infinite;
     }
+    #bubble_container {
+        width: 108%;
+    }
 }
 
 //rise, rotate, and near the end, start to disappear
