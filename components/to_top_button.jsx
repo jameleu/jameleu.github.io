@@ -29,7 +29,7 @@ export default function ToTopButton() {
 
     <div className={styles.container}>
         <a href="#" className={styles.to_top} ref={to_top_ref}> 
-            <IconContext.Provider value={{ style: {fontSize: "2.5vw"}}}>
+            <IconContext.Provider value={{ style: {fontSize: "2.5vmax"}}}>
                 <AiOutlineUp/>
             </IconContext.Provider>
             <p className={styles.to_top_text}>To Top</p>
