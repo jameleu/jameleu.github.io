@@ -3,7 +3,9 @@
     width: 101.3%; //to eliminate white padding that appears for some reason
     margin: -2vw -2vh;
     --top_height: 100vh;
-
+    //light black
+    color: rgb(48, 48, 48); //set whole website's black without using css variables and having to set that for all children classes
+    font-family: Garamond, 'Times New Roman', Times, serif, "Trebuchet MS", Helvetica, sans-serif;
 }
 
 // .moving_background {
@@ -106,6 +108,7 @@
 }
 
 .title_hi, .title_hi_inv {
+    font-family: 'Times New Roman', Times, serif, "Trebuchet MS", Helvetica, sans-serif;
     pointer-events: none;
     font-size: 35vw;
     position: fixed;
@@ -218,6 +221,11 @@
     margin-bottom: 0;
 }
 
+.col_sect_c, .col_sect_a {
+    font-family: 'Times New Roman', Times, serif, "Trebuchet MS", Helvetica, sans-serif;
+    color: rgb(53, 53, 53); //lighter black
+}
+ 
 .col_sect_a0 {
     margin: 3% 0 8% 0;
 }

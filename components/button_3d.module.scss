@@ -2,10 +2,12 @@
 .slide_L, .slide_T, .slide_skew, .fill {
   padding: 1.5vw 2vw;
   font-size: 2vmax;
-  font-family: arial;
+  font-family: Georgia, 'Times New Roman', Times, serif, "Trebuchet MS", Helvetica, sans-serif;
+
   text-decoration: none;
   z-index: 1;
-  color: #333;
+  color: rgb(86, 86, 86);
+
   position: relative;
   overflow: hidden;
   border: 0;
