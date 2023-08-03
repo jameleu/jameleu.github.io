@@ -208,7 +208,7 @@
 
 .col_sect_a, .col_sect_c {
     // background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, 19%, rgba(255, 245, 245, 0.219) 99%);
-    box-shadow: inset 2.5rem -15rem 15rem -13rem rgba(189, 187, 187, 0.473);
+    box-shadow: inset 2.5vw -15vw 15vw -13vw rgba(189, 187, 187, 0.473);
     border-radius: 4% / 20%;
     padding: 2vw;
     margin-left: -2vw; //to recenter (not sure why it wasn't originally)
@@ -270,6 +270,25 @@
     }
     100% {
       transform: translateY(0%);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .float {
+        width: 30vw;
+    }
+    .centered_h1 {
+        font-size: 6vw;
+        margin-top: 0vw;
+    }
+    .empty_space_2 {
+        height: 2vh;
+    }
+    .background {
+        width: 108%;
+    }
+    .orange_top {
+        width: 104%;
     }
   }
 
