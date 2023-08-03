@@ -30,6 +30,8 @@
     justify-content: flex-start;
     width: 90%;
     margin: 10% auto 2% auto;  
+    color: rgb(17, 16, 16); //dark black but not pure black
+    font-family: 'Times New Roman', Times, serif, "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .header_reason_T {
@@ -86,7 +88,7 @@
 
 @media screen and (max-width: 1000px) {
     .fixed_wrapper {
-        top: -11.5vh;
+        top: -8.5vh;
     }
     .header_reason_B {
         font-size: 4vw;
@@ -98,7 +100,7 @@
 
 @media screen and (max-width: 700px) {
     .fixed_wrapper {
-        top: -6vh;
+        top: -4.5vh;
     }
     .header_reason_B {
         font-size: 4.5vw;
