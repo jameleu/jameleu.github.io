@@ -72,6 +72,7 @@
   height: 100%;
   position: absolute;
   z-index: 4;
+  font-size: 100%;
 
 }
 
@@ -82,7 +83,7 @@
   max-height: 130%;
   position: absolute;
   left: 1.6vw;
-  top: 5vmin;
+  top: 2vw;
   z-index: 5;
 }
 
@@ -116,21 +117,62 @@
   height: 100%;
 }
 
+
+@media screen and (max-width: 1100px) {
+  .bubbles {
+    height: 65vh;
+  }
+  .bubble {
+    height: 14vw;
+    width: 14vw;
+    margin-left: -3.5vw; //offset not having as much room on right as usual
+  }
+  .bbl_txt {
+    font-size: 120%;
+  }
+  .bubble:hover {
+    margin-top: -5px;
+    width: 15vw;
+    height: 15vw;
+  }
+  .popup {
+    transform: translate(11vw, 8vh);
+  }
+  .text_bubble {
+    
+    transform: scale(1.2, 1.7); //increase size of text bubble
+  }
+  .des {
+    top: -0.5vh;
+    font-size: 120%;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .bubbles {
     height: 65vh;
   }
   .bubble {
-    height: 12vw;
-    width: 12vw;
+    height: 18vw;
+    width: 18vw;
     margin-left: -3.5vw; //offset not having as much room on right as usual
+  }
+  .bbl_txt {
+    font-size: 100%;
   }
   .bubble:hover {
     margin-top: -5px;
-    width: 12.5vw;
-    height: 12.5vw;
+    width: 19vw;
+    height: 19vw;
+  } 
+  .text_bubble {
+    
+    transform: scale(1.8, 1.8); //increase size of text bubble
   }
   .des {
-    top: 3vmin;
+    top: -2vh;
+    width: 100%;
+    left: 0vw;
+    font-size: 120%;
   }
 }
