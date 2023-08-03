@@ -258,9 +258,9 @@ export default function Home() {
           <section className={styles.col_sect_a} ref={hobbies_ref}>
             <animated.p style={hobbies_style} className={styles.centered_h1}> These are some other things that I enjoy: </animated.p> 
             <div className={styles.rows}>
-                <SlideTButton3D text={"Baking"} link={"https://google.com"}/>
-                <SlideSButton3D text={"Composing Music"} link={"https://google.com"}/>
-                <FillRectButton3D text={"Writing"} link={"https://google.com"}/>
+                <SlideSButton3D text={"Composing Music"} link={"https://drive.google.com/drive/folders/17kzkaF0z7BXDXfQkOHhd6_3eq92c_ufc?usp=drive_link"}/>
+                <SlideTButton3D text={"Baking"} link={"https://drive.google.com/drive/folders/1F5t_4hKnHxMh05eWu-otzwRs4B3eMMJM?usp=sharing"}/>
+                <FillRectButton3D text={"Writing (Yelp Elite)"} link={"https://www.yelp.com/user_details?userid=thhuUMCb_45R83DfOuhZew"}/>
             </div>
           </section>
           
