@@ -1,6 +1,6 @@
 
 .progress {
-    height: 0.87vh;
+    height: 0.4vh;
     width: 0%;
     background-color: #5199ffdf;
     position: fixed;
@@ -19,5 +19,11 @@
     to {
       background-color: rgba(0, 2, 57, 0.816);
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .progress {  
+      height: 0.01vh;
     }
   }
