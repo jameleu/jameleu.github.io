@@ -75,7 +75,19 @@
     font-family: Garamond;
   }
   
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
+    .cube_wrap {
+      right: 11%;
+      bottom: 10%;
+      --size: 7vh;
+    }
+    .to_top {
+      right: 9vw;
+      bottom: 8%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
     .cube_wrap {
       right: 14%;
       bottom: 10%;
