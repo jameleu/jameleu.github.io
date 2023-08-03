@@ -1,7 +1,7 @@
 //all button properties
 .slide_L, .slide_T, .slide_skew, .fill {
   padding: 1.5vw 2vw;
-  font-size: 2vw;
+  font-size: 2vmax;
   font-family: arial;
   text-decoration: none;
   z-index: 1;
@@ -142,6 +142,7 @@
 
 @media screen and (max-width: 700px) {
   .slide_L, .slide_T, .slide_skew, .fill { //cut layers if have smaller screen and also decrease amount moved when hovered/clicked on
+    font-size: 3vw;
     box-shadow: //set 3D effect
     1px 0   0 var(--right-color),
     1px 1px 0 var(--bottom-color),
