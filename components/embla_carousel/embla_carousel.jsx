@@ -13,7 +13,7 @@ import Autoplay from 'embla-carousel-autoplay'
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel({options}, [Autoplay()])
+  const [emblaRef, emblaApi] = useEmblaCarousel({options}, [Autoplay({delay: 8000, stopOnMouseEnter: true})])
 
   const onButtonClick = useCallback((emblaApi) => {
     const { autoplay } = emblaApi.plugins()
