@@ -10,7 +10,7 @@ export default function Footer() {
                 jleung2101@gmail.com
             </a>
             <div className={style.other_contact}>
-                <p className={style.phone}> (626) 679 4916 </p>
+                <p className={style.phone}> (626) 679-4916 </p>
                 <p className={style.divider}> | </p>
                 <a className={style.email} href= "mailto:jameleu@umich.edu" > jameleu@umich.edu </a>
             </div>
