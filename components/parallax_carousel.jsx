@@ -11,7 +11,7 @@ export default function ParallaxCarousel() {
         "text": 
             [
             "Caught 104+ minor & 11 integral defects in map software w/Python-Robot automation bots that used image recognition (Sikuli) and Microsoft GUI component recognition (White Library) to navigate the map and menus to test features.",
-            "Also automated typing and using mouse scroll to search and filter to verify querying features, saving the company $10k",
+            "Also automated typing and using mouse scroll to search and filter to verify querying features, saving the company $10k+",
             "Fetched 100k+ entries w/SQL for testing validation data & accessed it w/hash tables, binary search, & csv parsing"
             ]
             ,
@@ -21,8 +21,8 @@ export default function ParallaxCarousel() {
         {"header": "Northrop Grumman XML Corrector", 
         "text": 
             [
-            "Wrote Python-Regexp script that maintains and corrects XMLs, freeing 100+ hours of manual work",
-            "In 10,000 line file, script made 114,286+ changes (<=5s runtime)",
+            "Wrote Python-Regexp script that maintains and corrects XMLs, freeing 1000+ hours of manual work",
+            "In 10,000 line file, script made 114,286+ changes (<=1s runtime)",
             "Utilized stack to keep track of balanced delimiters without false error raises for the outer tags when there are missing inner tags.",
             "Iteratively looked for missing tags in future lines to extract and move them to their correct positions in past lines",
             'Differentiated between edge cases in regexp to add missing characters and replace and delete incorrectly converted characters',
@@ -50,7 +50,7 @@ export default function ParallaxCarousel() {
         "text": 
             [
             "Sorted documentation library on website in logarithmic time given user filter input, optimized w/React fast refresh",
-            "Increased viewer retention and click throughs on website by 61% w/hover-interactive about me cards for teammates",
+            "Increased viewer retention and click throughs on website by 121% w/hover-interactive about me cards for teammates",
             "Using CSS, crafted parallax effect w/moving background, pie chart visuals, adaptively sized video, and animated stats that counted up w/real life physics-based acceleration", 
             "Designed multi-layer React state system to show the animated stats and team member cards of the team currently selected. Animated flipping transition between stats and trailing transition between different teams' cards.",
             "Used Javascript promises for asynchronous transition"
