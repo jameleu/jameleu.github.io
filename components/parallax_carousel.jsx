@@ -10,7 +10,7 @@ export default function ParallaxCarousel() {
         {"header": "Northrop Grumman Test Bots", 
         "text": 
             [
-            "Caught 104+ minor & 11 integral defects in map software w/Python-Robot automation bots that used image recognition (Sikuli) and Microsoft GUI component recognition (White Library) to navigate the map and menus to test features.",
+            "Caught 104+ minor & 11 integral defects in map software w/Python-Robot automation bots that used image recognition (Sikuli) and Microsoft GUI component recognition (White Library) to navigate the map and menus to test features",
             "Also automated typing and using mouse scroll to search and filter to verify querying features, saving the company $10k+",
             "Fetched 100k+ entries w/SQL for testing validation data & accessed it w/hash tables, binary search, & csv parsing"
             ]
@@ -23,7 +23,7 @@ export default function ParallaxCarousel() {
             [
             "Wrote Python-Regexp script that maintains and corrects XMLs, freeing 1000+ hours of manual work",
             "In 10,000 line file, script made 114,286+ changes (<=1s runtime)",
-            "Utilized stack to keep track of balanced delimiters without false error raises for the outer tags when there are missing inner tags.",
+            "Utilized stack to keep track of balanced delimiters without false error raises for the outer tags when there are missing inner tags",
             "Iteratively looked for missing tags in future lines to extract and move them to their correct positions in past lines",
             'Differentiated between edge cases in regexp to add missing characters and replace and delete incorrectly converted characters',
             "Wrote detailed documentation on usage and maintainability"
@@ -52,7 +52,7 @@ export default function ParallaxCarousel() {
             "Sorted documentation library on website in logarithmic time given user filter input, optimized w/React fast refresh",
             "Increased viewer retention and click throughs on website by 121% w/hover-interactive about me cards for teammates",
             "Using CSS, crafted parallax effect w/moving background, pie chart visuals, adaptively sized video, and animated stats that counted up w/real life physics-based acceleration", 
-            "Designed multi-layer React state system to show the animated stats and team member cards of the team currently selected. Animated flipping transition between stats and trailing transition between different teams' cards.",
+            "Designed multi-layer React state system to show the animated stats and team member cards of the team currently selected. Animated flipping transition between stats and trailing transition between different teams' cards",
             "Used Javascript promises for asynchronous transition"
             ]
             ,
@@ -68,7 +68,7 @@ export default function ParallaxCarousel() {
             "Designed realistic physics-based animations (React Spring) and CSS animations that animate on scroll position, as well as object visibility calculated from window-object convergence",
             "Tracked scroll position within whole container and sections of website using calculations with document offsets, reference top offsets, and inner/outer window size",
             "For the bubble's floating movement, used Perlin Noise to generate naturally smooth sequence of pseudo-random numbers to determine bubbles' position. Pop up text has adaptive size despite the lack of the usual hierarchical child to parent influenced sizing",
-            "Created typewriter animation that uses before pseudo-element to hide the text and slowly reveal the text by an amount calculated to be one letters-width for the given font size."
+            "Created typewriter animation that uses before pseudo-element to hide the text and slowly reveal the text by an amount calculated to be one letters-width for the given font size"
             ]
             ,
         "img" : "null"},
