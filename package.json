@@ -6,17 +6,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/traverse": "^7.23.2",
     "@emotion/react": "^11.11.0",
     "@mantine/core": "^6.0.11",
     "@mantine/hooks": "^6.0.11",
     "embla-carousel-autoplay": "^8.0.0-rc05",
     "embla-carousel-react": "^8.0.0-rc04",
+    "ip": "^1.1.9",
     "next": "latest",
     "noisejs": "^2.1.0",
+    "postcss": "^8.4.31",
     "react": "18.2.0",
+    "react-devtools-core": "^4.28.4",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-spring": "^9.7.1",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "zod": "^3.22.4"
   }
 }
