@@ -234,7 +234,7 @@ export default function Home() {
             <Intro_Bio/>
           </section>
           </div>
-          <ParallaxCarousel/>
+          {/*<ParallaxCarousel/>*/}
           <div className={styles.foreground}>
             <div className={styles.empty_space_2}> </div>
           <section className={styles.col_sect_a0}>
