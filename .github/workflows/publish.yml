@@ -43,7 +43,7 @@ jobs:
         uses: actions/setup-node@v3
         with: #cache SPEEDS THINGS UP
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          node-version: '16.10.0'  #update as needed
+          node-version: '18.17.0'  #update as needed
 
       - name: Setup Pages 🔧
         id: pages
