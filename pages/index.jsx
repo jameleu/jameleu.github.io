@@ -94,8 +94,8 @@ export default function Home() {
   useChain([t_ref, d_ref], [0, 0.3], 1000);
 
   const coding_list = [
-    "I like to code in C++ and C.", 
-    "I like to code in Javascript and React.",
+    "I like to code in C++ and C#.", 
+    "I like to code in Django and React.",
     "I like to code in Python."
   ];
 
@@ -219,7 +219,7 @@ export default function Home() {
             <div className={n_styles.profile_wrapper}>
             <Image
                     priority
-                    src="/images/profile_picture.jpg"
+                    src="/images/wave.png"
                     height={216}
                     width={216}
                     layout="responsive"
@@ -246,7 +246,7 @@ export default function Home() {
             <Typewriter text_list={coding_list} duration={"12s"}/>
             <div className={styles.centered}>
               <div className={styles.code_button}>
-                <SlideLButton3D className={styles.code_button} text={"See my code!"} link={"https://docs.google.com/document/d/1-MAY-LXknfHSTmLBcJ8PC7YlMopGt07p4Cl6EZ08K2o/edit?usp=sharing"}> </SlideLButton3D>
+                <SlideLButton3D className={styles.code_button} text={"See my code!"} link={"https://github.com/jameleu/"}> </SlideLButton3D>
               </div>
             </div>
           </section>

@@ -21,7 +21,7 @@ export default function Footer() {
             </IconContext.Provider>
             </div>
             <p className={style.bottom_txt_1}> James Leung </p>
-            <p className={style.bottom_txt_2}> 2023 </p>
+            <p className={style.bottom_txt_2}> 2025 </p>
             <br></br>
         </div>
     );

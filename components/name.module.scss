@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-right: 45%;
 }
 
 .self_introduction {
@@ -51,9 +52,9 @@
     justify-content: space-around;
     font-size: 12vw;
     width: 35%;
-    margin: 0% auto 10% auto;
+    margin: 0% auto 10% 0%;
     --text_color: rgba(30, 163, 156, 0.925);
-    transform: translateX(-15%); //to offset exclamation mark sticking out of this div
+    transform: translateX(5%);
 }
 
 .name_base {
