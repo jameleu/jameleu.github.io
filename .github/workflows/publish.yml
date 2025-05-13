@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Detect package manager 👻
         id: detect-package-manager
-        run: | 
+        run: |
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "::set-output name=manager::yarn"
             echo "::set-output name=command::install"
@@ -36,34 +36,41 @@ jobs:
             echo "Unable to determine packager manager"
             exit 1
           fi
+
       - name: Setup Node 🍉
         uses: actions/setup-node@v3
         with:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          node-version: '18.17.0' #update as needed
-      - name: Setup Pages 🔧
+          node-version: '18.17.0'
+
+      - name: Configure Pages 🔧
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v4
         with:
           static_site_generator: next
+
       - name: Restore cache 💾
         uses: actions/cache@v3
         with:
-          path: |
-            .next/cache
+          path: .next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+
       - name: Install dependencies 🥑
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js 🍄
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+
       - name: Static HTML export with Next.js 🥯
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
+
       - name: Upload artifact ⛱️
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+
   deploy:
     environment:
       name: github-pages
@@ -73,4 +80,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
